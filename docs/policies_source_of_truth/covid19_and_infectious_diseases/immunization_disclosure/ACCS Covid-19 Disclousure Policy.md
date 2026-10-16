@@ -1,0 +1,22 @@
+# ACCS Covid-19 Disclousure Policy
+
+- **Original Source File**: `ACCS Covid-19 Disclousure Policy.pdf`
+- **Format**: `.PDF`
+- **Clean Category**: `covid19_and_infectious_diseases/immunization_disclosure`
+- **Source Path**: `policy\xACCS POLICYx\ACCS Covid-19 Policies\2.ACCS IMMUNIZATION DISCLOSURE POLICY SEPT 2021\ACCS Covid-19 Disclousure Policy.pdf`
+
+---
+
+<!-- Page 1 -->
+Covid-19 Vaccination Policy  All Child Care Solutions Inc.  Covid-19 Immunization Disclosure Policy   Purpose  The purpose of this policy is to outline organizational expectations with regards to COVID-19 immunization disclosure.  Contingent upon vaccine availability, all eligible individuals, are strongly encouraged to receive a COVID-19 vaccine, unless there is a medical reason to not receive a vaccine.  Background  All Child Care Solutions Inc. recognizes the importance of immunization of individuals regularly interacting and providing services to children due to the nature of their work and potential for exposure in the community. This COVID-19 immunization policy aims to protect the child care program’s population including children, staff, volunteers, students on educational placements and any person providing child care or other services to a child in care.  COVID-19 is an acute respiratory illness caused by the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). It may be characterized by fever, cough, shortness of breath, and several other symptoms. Asymptomatic infection is also possible. The risk of severe disease increases with age but is not limited to the elderly and is elevated in those with underlying medical conditions.     Application of the Policy  The Immunization Disclosure Policy will apply to the following groups of individuals, except where the individual works remotely and the individual’s work does not involve in-person interactions:  • Employees of the licensee (including home visitors in the case of home child care);
+
+<!-- Page 2 -->
+• Home child care providers;  
+● Volunteers;  ● Students on an educational placement;  ● Any licensee who regularly interacts with children, staff or providers;  ● Adults ordinarily a resident of or regularly present at a home child care premises; and  ● Any person who provides child care or other services to a child who receives child care (e.g., special needs resourcing consultant)  Policy  The Chief Medical Officer of Health has directed all licensed child care programs to develop, implement and ensure compliance with a COVID-19 immunization disclosure policy. All individuals covered by this policy must provide one of the following:  1. Proof of all required doses of a COVID-19 vaccine approved by the World Health Organization.  2. Written proof of a medical reason, provided by either a physician or nurse practitioner that sets out:  1. that the person cannot be vaccinated against COVID-19; and  2. the effective time period for the medical reason (i.e., permanent or time- limited).  3. Proof that the individual has completed an educational session approved by (All Child Care Solutions Inc.).  Educational session  The educational session has been approved by and/or provided by (All Child Care Solutions Inc.) and addresses all of the following learning components:
+
+<!-- Page 3 -->
+• how COVID-19 vaccines work; 
+• vaccine safety related to the development of the COVID-19 vaccines; 
+ • benefits of vaccination against COVID-19; 
+• risks of not being vaccinated against COVID-19; and 
+• possible side effects of COVID-19 vaccination.  Support for Vaccination  (All Child Care Solutions Inc.) will provide the following supports for people subject to this policy to receive a vaccine:  (for example: assistance with booking vaccine appointment, peer-to-peer support, etc.).  Testing Requirements  Individuals subject to the policy who are not fully vaccinated must regularly complete an antigen point of care testing for COVID-19 and demonstrate a negative result, 3 times per week; and provide written verification of the negative test result from an approved testing facility.  Confidentiality Statement  As per s. 77 of O. Reg 137/15 made under the Child Care and Early Years Act, 2014, (name of child care program) is required to report such statistical information to the Ministry of Education as may be required. No identifying information will be provided to the ministry in relation to this policy; all statistical information will be provided in aggregate form.

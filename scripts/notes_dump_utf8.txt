@@ -1,0 +1,413 @@
+===  1. [portal_ui] Add One-Click Cloud Firestore Database Download for Admin ===
+ID: note-1789169187036 | Status: in_progress | Priority: urgent
+Summary: Provide a one-click button in the Admin Command Centre to download the complete Cloud Firestore database backup. Access is strictly restricted to Administrators; export file format details to be finalized during developer consultation.
+Queries (7):
+  * add to dev notes, create button to one click download entire firestore database
+  * it's only for admin, we'll talk about format more later, entire datase and selectable, not sure if we're going to encrypt but we shall log, talk more about expireation later
+  * add note: please remove this section Provider Guaranteed Statutory Payout: Licensed provider receives $35.00/day ($175/wk | $761.25/mo) per child funded via parent fee + Ontario Government CWELCC top-up grant. This type of information should not be view parent viewing eyes as its only for Admin and Director access.
+  * add note: payment option A : change email to the main gmail account allchildcaresolutions@gmail.com (for now I will change it later once the company grows)
+  * 1. Yes just keep Capacity 6 children and 2. Yes keep it only for admin command centre and Home visitor field portal
+  * 1. id like it quarantined with the option to let them see specific things like their daily rate, total care days and their estimate. 2. providers shouldn't have edit access to things like their daily rate  but yes monthly totals should be automated but editable by them if they perhaps made a mistake but give me an admin only view  of a timestamp if they made a change to see if its unauthorized or not.
+  * Are you able to Let the developer know to disregard the email I sent him and use the notes in here that we made ?
+
+===  2. [portal_ui] Implement Home Visitor Hub: Remove 3D Card Effects & Phantom Styling ===
+ID: note-1789171754486 | Status: proposed | Priority: high
+Summary: Remove 3D depth treatments, perspective transforms, and lingering phantom box-shadow artifacts from all cards in the Home Visitor Hub. Transition to a clean, high-contrast flat layout optimized for mobile field tablet usability during CCEYA s. 26 inspections.
+Queries (3):
+  * dev note: home visitor hub: remove 3d effect on cards
+  * add dev note: check phantom 3d styling
+  * add to dev note: home visitor hub: remove 3d effect on cards
+
+===  3. [general] Implement Talk about locally running app ===
+ID: note-1789172183012 | Status: proposed | Priority: high
+Summary: Establish clear specifications for running the application locally. This covers standardized local developer environment setup (Firebase emulators, synthetic test data) and assesses requirements for an offline-first local runtime (PWA or desktop bundle) for agency staff operating in areas with limited connectivity across Durham and York regions.
+Queries (1):
+  * add to notes, talk about locally running app
+
+===  4. [portal_ui] Implement Polish PDF Print Styles for Agency Director Binder ===
+ID: note-1789238677681 | Status: proposed | Priority: high
+Summary: Optimize CSS print media stylesheets and layout formatting for hardcopy outputs across all agency forms (PAR-1 Enrolment, PAR-2 Emergency Wallet, PAR-3 Medical Consent, PAR-5 Contract, and PROV checklists). Ensure clean pagination, prevent orphan signature blocks, enforce high-contrast headers/footers with timestamps, and format for standard 3-ring regulatory binder insertion.
+Queries (3):
+  * Make note to polish pdf prints for Jon's binder
+  * to polish pdf prints for Jon's binder
+  * Make note to polish up pdf prints for Jon's binder
+
+===  5. [ai_feature] Implement Make note to add rest of forms to the form builder ===
+ID: note-1789498044047 | Status: proposed | Priority: high
+Summary: Expand the Dynamic Form Builder Studio beyond the current 10 forms (PAR-0 through PAR-5 and PROV-0 through PROV-3) to include the remaining statutory CCEYA agency instruments, including Serious Occurrence Reports, Medication Administration Logs, Individualized Anaphylaxis Plans, and Daily Attendance/Wellness Logs.
+Queries (1):
+  * make note to add rest of forms to the form builder (currently only has 10)
+
+===  6. [ai_feature] Implement Are we live chat? ===
+ID: note-1789684328873 | Status: clarification_needed | Priority: high
+Summary: Add an 'Expected but Absent' attendance button in the Licensed Provider Hub for daily roster check-ins. In child profile records for subsidized placements, provide an administrative field to record annual allotted sick/absent days and track remaining days, decrementing the ledger when marked absent so the agency can reconcile against municipal subsidy agreements (e.g., Durham Region / Toronto Children's Services allowable absence thresholds). Can be staged: MVP attendance button first, automated subtraction ledger in subsequent revision.
+Queries (18):
+  * are we live chat?
+  * Note: Under Master Application for Enrolment please have it be multi select for  (type of care required)
+  * add note: Can you have the chat bot be able to pop out so I can move it around so its not in view of things id like to review
+  * Can you have the chat bot be able to pop out so I can move it around so its not in view of things id like to review
+  * add note: "what happens next?" Please rewrite it so it says "Agency Reviews Home Provider Availability", "You'll receive a discovery call to confirm your child care needs" [Re-write Step 2 is locked: Agency Representative is reviewing you child care requests for (insert Child's name); pretty much just have Agency or Agency Representative replace my name everywhere if we can please.
+  * add note: Par-1 master application enrolment form is incomplete (i'm sure you're aware i'm just making a note)
+  * add note: Im not sure if its just in the demo (my guess is demo only) or not but the "Provider Guaranteed Statutory Payout: Licensed provider receives $35.00/day ($175/wk | $761.25/mo) per child funded via parent fee + Ontario Government CWELCC top-up grant." Should not be seen by parents what so ever. Sensitive information like that is for agency eyes only.
+  * add note:please  remove " Provider Guaranteed Statutory Payout: Licensed provider receives $35.00/day ($175/wk | $761.25/mo) per child funded via parent fee + Ontario Government CWELCC top-up grant." Sensitive information like this is for agency admin side only.
+  * add note: to do- please  remove " Provider Guaranteed Statutory Payout: Licensed provider receives $35.00/day ($175/wk | $761.25/mo) per child funded via parent fee + Ontario Government CWELCC top-up grant." Sensitive information like this is for agency admin side only.
+  * Feedback note for next round: add note:please  remove " Provider Guaranteed Statutory Payout: Licensed provider receives $35.00/day ($175/wk | $761.25/mo) per child funded via parent fee + Ontario Government CWELCC top-up grant." Sensitive information like this is for agency admin side only.
+  * add note: payment option A : change email to the main gmail account allchildcaresolutions@gmail.com (for now I will change it later once the company grows)
+  * for 2 id like the option to toggle that view for them on and off please make a note of that to the developer first before implementing
+  * add note: For payment option B: id like that to be removed the cheque  and those options are cumbersome to collect and chase after;  I will add other payment methods later on once my company grows so keep a place holder for that just in case. Im all about flexibility and options.
+  * add note: Under "Capacity: 6 children" Remove the  (Max 3 under 3yo) Parents / clients don't need to  see information like that
+  * 2. Either or ... What every seems appropriate and professional at that moment in time
+  * add note: Intake forms incomplete (i'm sure thats still a work in progress just noting it just in case)
+  * did i already make a note about the 3 documents being moved to a new section in the intake pipeline?
+  * add note: Licensed provider hub add attendance button for "expected but absent" this is for subsidy which counts towards their allotted sick days (perhaps add a feature where in a child's profile if on a government subsidy director or admins can input their amount of sick days and sick days left that they have and it can subtract from their remaining) If its not too complex for developer. If it is then I would like to bank that as a feature for later app revisions
+
+===  7. [ratio_compliance] Implement The dedicated parent registration link (magic li ===
+ID: note-1789918675826 | Status: completed | Priority: high
+Summary: Client feedback logged by Jonathan: "the dedicated parent registration link (magic link). Id like moved  to after we accept the 3 initial documents So pipeline goes like this  initial  parent intake > (Agency Review/Approval) > 3 documents uploaded upon approval  (Magic link inserted at bottom greyed out until we approve 3 documents) > Registration Process starts"
+Queries (5):
+  * the dedicated parent registration link (magic link). Id like moved  to after we accept the 3 initial documents So pipeline goes like this  initial  parent intake > (Agency Review/Approval) > 3 documents uploaded upon approval  (Magic link inserted at bottom greyed out until we approve 3 documents) > Registration Process starts
+  * how do register a child?
+  * what's new to do ?
+  * Feedback note for next round: the dedicated parent registration link. Id like moved  to after we accept the 3 initial documents So pipeline goes like this  initial  parent intake > (Agency Review/Approval) > 3 documents uploaded upon approval  (Magic link inserted at bottom greyed out until we approve 3 documents) > Registration Process starts
+  * add note: the dedicated parent registration link (magic link). Id like moved  to after we accept the 3 initial documents So pipeline goes like this  initial  parent intake > (Agency Review/Approval) > 3 documents uploaded upon approval  (Magic link inserted at bottom greyed out until we approve 3 documents) > Registration Process starts
+
+===  8. [portal_ui] Implement Global Agency Role Branding: Replace 'Jonathan' with ===
+ID: note-1789919212374 | Status: in_progress | Priority: high
+Summary: Audit and standardize all parent-facing, public intake, and operational copy to replace hardcoded personal references to 'Jonathan' with professional institutional designations ('Agency Director' for executive approvals/contracts and 'Agency Representative' for pre-screenings, discovery calls, and child care request reviews). Ensures institutional branding and accommodates multi-staff delegations across agency operations.
+Queries (1):
+  * "what happens next?" Please rewrite it so it says "Agency Reviews Home Provider Availability", "You'll receive a discovery call to confirm your child care needs" [Re-write Step 2 is locked: Agency Representative is reviewing you child care requests for (insert Child's name); pretty much just have Agency or Agency Representative replace my name everywhere if we can please.
+
+===  9. [intake_pipeline] Implement Fee Collection Streamlining: Remove Cheque Option & ===
+ID: note-1789921450964 | Status: proposed | Priority: high
+Summary: Decommission and remove physical cheque and cash collection options (Option B) from all parent billing notices, intake forms, and Form PAR-5 parent agreements to eliminate administrative collection friction and NSF risks. Retain a flexible, extensible placeholder in the billing schema to accommodate future modern payment integrations (e.g., Pre-Authorized Debit or Stripe) as the agency scales.
+Queries (1):
+  * add note: For payment option B: id like that to be removed the cheque  and those options are cumbersome to collect and chase after;  I will add other payment methods later on once my company grows so keep a place holder for that just in case. Im all about flexibility and options.
+
+=== 10. [portal_ui] Configure Parent-Facing Capacity Display: Remove Ratio Sub-Breakdowns ===
+ID: note-1789921700370 | Status: in_progress | Priority: high
+Summary: Confirmed by Agency Director: Parent-facing provider profile cards and public listings will display clean 'Capacity: 6 children' with all age ratio sub-breakdowns ('Max 3 under 3yo', 'Max 3 under 2yo') removed. Full statutory CCEYA s. 8 age ratio breakdowns (under-2s, under-3s, and provider's own children under 6) remain strictly preserved in the Admin Command Centre and Home Visitor Field Portal for regulatory inspection audits.
+Queries (2):
+  * add note: Under "Capacity: 6 children" Remove the  (Max 3 under 3yo) Parents / clients don't need to  see information like that
+  * add note: Rename “Home Visitor Field Portal” to “Home Visitor Portal.”
+
+=== 11. [general] Remove the Jonathan throughout the app and replace it with Agency ===
+ID: note-1789921893781 | Status: proposed | Priority: high
+Summary: Client operational requirement: Remove the Jonathan throughout the app and replace it with Agency. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (4):
+  * add note: Remove the Jonathan throughout the app and replace it with Agency Director or Agency Representative Its not always me reviewing  things and it looks more professional when you don't put a persons name everywhere
+  * 2. yes
+  * 1. absolutely!
+  * 2. Very yes 3. Yes
+
+=== 12. [intake_pipeline] Implement Audit and Complete Statutory Parent Intake Suite (PAR-0 to ===
+ID: note-1789922338250 | Status: in_progress | Priority: high
+Summary: Conduct a comprehensive audit and finalize all missing statutory data collection fields, consent clauses, and emergency contacts across the parent intake pipeline (PAR-0 through PAR-5). Ensure full alignment with CCEYA O. Reg. 137/15 s. 68 child record mandates prior to full production onboarding.
+Queries (1):
+  * add note: Intake forms incomplete (i'm sure thats still a work in progress just noting it just in case)
+
+=== 13. [ratio_compliance] Implement Universal Multi-Tier Notepad & HDLH Pedagogical AI ===
+ID: note-1789922984005 | Status: proposed | Priority: high
+Summary: Implement a collaborative universal notepad across Child, Provider, and Family profile cards with strict multi-tier role permissions (Agency Director Private, Provider/HV Collaborative, Family Milestone View). Features gentle daily logging reminder prompts for providers rather than rigid check-in barriers. Banks a future AI-assisted emergent curriculum generator structured around the 4 pillars of Ontario's 'How Does Learning Happen?' (Belonging, Well-Being, Engagement, Expression).
+Queries (1):
+  * add note: Can we get a universal notepad section for each child, provider and family profile where providers, admin and home visitors can make notes; it is required by the ministry that daily log write ups are made about children to see their progress; Later  note feature that id like to bank is if provider writes a child's  or groups interest and they can go into AI and have it  assemble a program plan for their group so it reduces the guess work in programming going forward (this will be a later feature not for this current iteration of the app)
+
+=== 14. [policies_legal] Implement 1. yes absolutely and strict! The director makes private ===
+ID: note-1789923227519 | Status: clarification_needed | Priority: high
+Summary: Revise the Form PAR-0 submission acknowledgment to explicitly position intake submission as initiating an initial screening review with a licensed home child care agency, rather than placement matching. Maintain statutory citations for the Ontario Ministry of Education, the Child Care and Early Years Act (CCEYA 2014), and Canadian PIPEDA/PHIPA data protection standards, while removing server geography details ('in Montreal, Canada'). Opening sentence to be standardized to reflect this screening-first model.
+Queries (3):
+  * 1. yes absolutely and strict! The director makes private feedback notes on all things agency wide. 2. Yes 3. not necessarily but i would like gentle reminders to them to record these logs
+  * 1. the wording change is only here on this page. Once a parent/family is registered with the agency its fine to show them what their  monthly fee is obviously. This mitigates unnecessary parent confusion.    2. prompt parent to mention  it to agency during screening call.
+  * add note: The CCEYA Regulatory Consent and Pre-Screening Acknowledgment — wording change Describe submission as starting screening with a licensed home childcare agency, rather than initiating placement matching. Retain the references to the Ontario Ministry of Education, the Child Care and Early Years Act, and Canadian PIPEDA/PHIPA. Remove “in Montreal, Canada.” The opening sentence still needs final wording consistent with the screening-first approach.
+
+=== 15. [portal_ui] Configure Provider Monthly Attendance: Single Session & Provider ===
+ID: note-1789923738002 | Status: proposed | Priority: high
+Summary: Consolidate the Provider Monthly Child Attendance Form to remove split afternoon sessions, presenting a clean single daily session (In, Out, Daily Hours, Total Hours). Provide functionality for licensed providers to log their own operational attendance and working hours on the monthly sheet for agency oversight and CWELCC reconciliation. (Verified: Auto-fill from daily roster check-ins is already built and operational).
+Queries (1):
+  * add note: in the Provider Monthly Child Attendance Form Remove afternoon session and just have the 1 session  in, out, hours and total daily hours. Can you also give the ability to have the provider fill this sheet our for their OWN attendance please. Can you have the auto fill / auto complete attendance from check in feature also available on these sheets for both provider and children
+
+=== 16. [intake_pipeline] Implement Oh woops i missed there is already a button for autofill ===
+ID: note-1789923858869 | Status: clarification_needed | Priority: high
+Summary: Client operational requirement: Implement Did i already ask for those 3 initial documents be moved to. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (4):
+  * oh woops i missed there is already a button for autofill please disregard that feature request from previous entry I missed that
+  * did i already add the note to remove or see who sees the government regulatory markings throughout the app?
+  * did i already ask for those 3 initial documents be moved to a different place in the intake workflow?
+  * add note: Question for the developer; In regards to the compliance dossier will there be a something like a compliance  portal where they can sign off the corresponding documents that the dossier houses?
+
+=== 17. [ratio_compliance] Implement For printing these time sheet documents; are you able to ===
+ID: note-1789924038396 | Status: proposed | Priority: high
+Summary: Configure CSS print media rules (@media print) for the Provider Monthly Child and Provider Attendance Timesheets (Form PROV-1) to automatically format and fit onto a single page without requiring manual scaling. Suppress digital-only components including the Annual Compliance & CCEYA Training Video module and interactive action buttons to ensure a clean regulatory hardcopy.
+Queries (1):
+  * add note: for printing these time sheet documents; are you able to automatically able to make these fit on one page so its easier to print and the person printing dosen't have to auto scale it?  Perhaps also removing the "annual compliance & cceya training video" being displayed when printing? Can you ask the developer if its possible to fix this so its a cleaner print
+
+=== 18. [portal_ui] Configure Role-Based UI Sanitization: Regulatory Markings Restricted ===
+ID: note-1790019927836 | Status: in_progress | Priority: high
+Summary: Enforce a blanket role-based UI sanitization policy agency-wide. All government regulatory markings, formal CCEYA citations (e.g. O. Reg. 137/15 section tags), Ministry compliance audit tags, licensing inspection indicators, and statutory subsidy/payout rate breakdowns must be strictly quarantined to Agency Admin, Director, and Home Visitor roles. Confirmed: (1) Licensed Providers receive practical, plain-language operational guidance for health and safety (e.g. Sabrina's Law EpiPen procedures, safe sleep logs, smoke detector drills) with formal statute citations stripped out. (2) Form PAR-5 contractual wording remains open pending visual mockup review.
+Queries (1):
+  * add not: Any regulatory stuff should be for Admin and Home Visitor eyes only across the board
+
+=== 19. [policies_legal] Implement 1. yes  2. have yet to decide or see what that looks like ===
+ID: note-1790019999612 | Status: clarification_needed | Priority: high
+Summary: Client operational requirement: Implement 1. only on the post-submission 2. let me decide this later. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (7):
+  * 1. yes  2. have yet to decide or see what that looks like
+  * 1. only on the post-submission 2. let me decide this later but remind me!
+  * actually please let me alter that last note to "Zero fees to apply • An agency representative will contact you to discuss your child care needs."
+  * 1. yes with separate permissions that let the admin allow access if they choose to home visitor  parents do not see internal operational commentary across the board in all aspects of this app. 2. open multi line text area with staff initial and timestamps only for home visitors with access
+  * 1. family-by-family  2. let the read only be for home visitors while admin can override at his discretion.
+  * 1. not sure yet bank it and let me come back to it. 2. T4A 3. No only admins will hand out all invoices across the board either via print out or pdf/online document email format  its the admins discretion
+  * Are you able to Let the developer know to disregard the email I sent him and use the notes in here that we made ?
+
+=== 20. [portal_ui] Implement I may rename ACCS Hub / Home Care Hub and will follow up ===
+ID: note-1790020125687 | Status: proposed | Priority: high
+Summary: Agency Director noted a potential rename of 'ACCS Hub' / 'Home Care Hub' and will supply the finalized title. Architecture team to ensure application display names, portal headers, tab metadata, and automated notification footers are centrally parameterized for an effortless global update once confirmed.
+Queries (1):
+  * add note: I may rename ACCS Hub / Home Care Hub and will follow up with the new name
+
+=== 21. [portal_ui] Standardize Onboarding Terminology: Provider & Home Visitor ===
+ID: note-1790020191457 | Status: in_progress | Priority: high
+Summary: Standardize onboarding labels across top navigation, landing cards, portal entry points, and automated communications. Rename 'Provider Register' to 'Provider Application', rename 'Visitor Apply' to 'Home Visitor Application', and preserve 'Parent Intake'. Confirmed by Agency Director: All automated emails, SMS notifications, and applicant confirmation dispatches must mirror this terminology (e.g., 'Thank you for submitting your ACCS Provider Application').
+Queries (1):
+  * add note: Change “Provider Register” to “Provider Application.” Change “Visitor Apply” to “Home Visitor Application.” Keep “Parent Intake.”
+
+=== 22. [portal_ui] Implement Under edit family record please Use the broader options ===
+ID: note-1790020593638 | Status: proposed | Priority: high
+Summary: In the Edit Family Record modal and associated intake views, replace granular municipality options (Oshawa, Whitby, Ajax, Pickering, Clarington, Markham, etc.) with top-level regional tiers: 'Durham Region', 'York Region', and 'Toronto'. Streamlines data entry, eliminates unwieldy dropdown lists across smaller towns/hamlets, and prevents applicant and staff confusion.
+Queries (1):
+  * add note: under edit family record please Use the broader options “Durham Region,” “York Region,” and “Toronto" vs seeing the municipalities within that region as currently shown. The municipalities have so many smaller towns and cities within them its impossible to list them all and the list would be very large and perhaps confusing
+
+=== 23. [portal_ui] Implement Dedicated General Notes in Edit Family Record with Granular ===
+ID: note-1790020975452 | Status: in_progress | Priority: high
+Summary: In the Edit Family Record modal, add a dedicated multiline 'General Notes' textarea directly beneath 'Medical Notes and Allergies'. Visibility is strictly restricted from parents agency-wide. Access architecture: (1) Admin governs Home Visitor access via a per-family record toggle ('Allow Home Visitor Access'). (2) When permitted, Home Visitors append new entries with mandatory staff initials and automated timestamps, while existing entries remain read-only to safeguard the audit trail. (3) Agency Admin / Director retains full discretionary override authority to edit or amend existing entries as needed.
+Queries (1):
+  * add note: In Edit Family Record  add a separate field beneath “Medical Notes and Allergies” tentatively labelled “General Notes. This will be used to add other notes to their file for administrative or potentially home visitor use.
+
+=== 24. [portal_ui] Display Provider Region in 'By Child' Sort View & Roster Exports ===
+ID: note-1790021405031 | Status: in_progress | Priority: high
+Summary: In the Admin Command Centre's 'By Child' sort view, display the provider's operating region in brackets directly adjacent to their name under the 'Assigned Home' column (e.g., 'Provider Name (Durham Region)'). Confirmed: (1) Include in print and PDF roster exports provided spacing allows without visual clutter. (2) For children awaiting placement, display a clean 'Unassigned' without extra prefixes.
+Queries (1):
+  * add note: In the sort “By Child” view, show the provider’s region in brackets beside the provider name under Assigned Home. Example: “Provider Name (Durham Region).”
+
+=== 25. [ratio_compliance] Implement 1. sure if there is space to do so and it doesn't look ===
+ID: note-1790021656517 | Status: proposed | Priority: high
+Summary: Client operational requirement: Implement To aware the developer (Im sure hes working on it and will. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (2):
+  * 1. sure if there is space to do so and it doesn't look cluttered. 2. just "Unassigned" is fine
+  * add note: to aware the developer (Im sure hes working on it and will correct them but alot of the forms are incorrect. The rest of the app looks pretty good I think after all the notes made the last thing will be to correct the forms  eg. prov-3 the declaration has tb test results on it  it shouldn't  be on that type of form obviously. This is just a observation since this is one of the first times Im viewing the app but things look SOLID!! So far!
+
+=== 26. [intake_pipeline] Implement Dual Guardian Architecture: Stage 1 Intake vs Formal ===
+ID: note-1790021911404 | Status: in_progress | Priority: high
+Summary: Keep initial pre-screening (Form PAR-0) strictly limited to 1 primary guardian to minimize submission friction prior to the discovery call. During formal registration (Form PAR-1 onwards), enable complete secondary guardian fields with identical schema parity across emergency contacts (PAR-2), pickup authorizations, and billing records. Contract signature rules confirmed: A single primary legal guardian signature on Form PAR-5 satisfies binding admission; an optional secondary signature block is provided when both parents choose to co-sign.
+Queries (1):
+  * add note: Please make sure that the option to add a second guardian is available when  at the actual registration phase. At the initial entry point form only one guardian is sufficient because the discovery call has not happened yet. Make sure that second guardian or parent is consistent across the board in all records etc just like a single parent would be.
+
+=== 27. [ai_feature] Implement 2. one or if two is available the better but one is still ===
+ID: note-1790021994836 | Status: proposed | Priority: high
+Summary: Client operational requirement: Implement 2. one or if two is available the better but one is still. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (2):
+  * 2. one or if two is available the better but one is still fine regardless.
+  * add note: Confirm that Annual and Monthly Invoicing is an available feature with developer.  This should be evident for both Provider and Parents/Guardians
+
+=== 28. [portal_ui] Implement Did i ask to add a note to have this chat window be a pop ===
+ID: note-1790022109552 | Status: clarification_needed | Priority: high
+Summary: Convert the fixed AI assistant panel into a draggable, dockable, or pop-out window that users can reposition freely across the screen or collapse to the edge, preventing it from obscuring child profiles, form builder fields, or roster tables during active review.
+Queries (1):
+  * did i ask to add a note to have this chat window be a pop out window?
+
+=== 29. [intake_pipeline] Implement In the small group care box in the parent initial intake ===
+ID: note-1790022348362 | Status: proposed | Priority: high
+Summary: Update the 'Small Group Care' callout box on the Parent Initial Intake Form (Form PAR-0) to read: 'Max 6 children per home, with personalized attention in a warm, nurturing environment'. Replaces clinical statutory phrasing with warm, family-centred messaging highlighting personalized care while reinforcing the statutory CCEYA 6-child ratio limit.
+Queries (1):
+  * add note: in the small group care box in the parent initial intake form can you reword the max 6 children  sentence  to "Max 6 children per home, with personalized attention in a warm, nurturing environment" please
+
+=== 30. [portal_ui] Implement CWELCC Card Copy: Remove Monthly Estimate & Direct Subsidy ===
+ID: note-1790022808609 | Status: in_progress | Priority: high
+Summary: On the initial intake CWELCC $22/Day card, remove the monthly average fee figure ($478.50/mo) to eliminate early confusion caused by month-to-month calendar variations. Re-word municipal subsidy copy to indicate that subsidies may be supported and explicitly prompt parents to mention their subsidy status to the agency representative during their pre-screening discovery call. Post-registration parent portals, child files, and invoices will continue to display exact calculated monthly fees based on confirmed schedules.
+Queries (1):
+  * add note: In the CWELCC $22/Day marketing card can you remove the "average fee of "478.50" and Re-word "Municipal subsidies fully supported" to  "Municipal Subsidies may be supported" Please Inquire with the agency for more information.
+
+=== 31. [policies_legal] Implement Form PAR-0 Subtitle Copy: Zero Fees & Discovery Call Wording ===
+ID: note-1790023355751 | Status: proposed | Priority: high
+Summary: Replace the existing fee and discovery-call line on the Parent Initial Intake & Pre-Screening page (Form PAR-0) with: 'Zero fees to apply • An agency representative will contact you to discuss your child care needs.' Aligns with CCEYA s. 75.1 waitlist fee prohibitions while framing the discovery call around comprehensive family and child care needs assessment.
+Queries (1):
+  * add note: Replace the existing fee and discovery-call line with: “Zero fees to apply • An agency representative will contact you to discuss your application.”
+
+=== 32. [portal_ui] Implement Under Application  Successfully submitted Please rename it ===
+ID: note-1790023854877 | Status: proposed | Priority: high
+Summary: Update the post-submission confirmation banner on Form PAR-0: (1) Rename the main title to 'Your Child Care Inquiry has been Successfully Submitted!'. (2) Rename the subtitle body to 'Your pre-screening application for {count} child(ren) has been received.' Removes internal enterprise jargon ('registered in our central CRM') in favor of parent-friendly, institutional messaging.
+Queries (1):
+  * add note: Under Application  Successfully submitted Please rename it to "Your Chid Care Inquiry has been Successfully Submitted!". Rename "Your pre-screening application for 1 child has been registered in our central CRM." To "Your pre-screening application for 1 child has been received.
+
+=== 33. [ratio_compliance] Implement Form PAR-0: 'What Happens Next' 3-Step Sequence & Screening ===
+ID: note-1790024000218 | Status: in_progress | Priority: high
+Summary: Display revised 3-step numbered sequence across post-submission views and subsequent intake review screens: (1) 'An agency representative will review your screening application.' (2) 'We’ll contact you, usually by phone or alternatively by email, to discuss your child’s needs and care preferences as part of the screening process.' (3) 'Upon approval following the screening process, we’ll guide you through the next steps to begin registration.' Removes personal names, 10-minute promises, placement-matching claims, and premature portal-unlock text.
+Queries (1):
+  * add note: What Happens Next — replacement numbered steps Start each item directly with the sentence, without an extra heading. 1. “An agency representative will review your screening application.” 2. “We’ll contact you, usually by phone or alternatively by email, to discuss your child’s needs and care preferences as part of the screening process.” 3. “Upon approval following the screening process, we’ll guide you through the next steps to begin registration.” These steps distinguish review, screening conversation, and registration. Remove the personal director name, ten-minute call promise, placement-matching language, and portal-unlocking description from the existing steps.
+
+=== 34. [ai_feature] Implement Oh wait in regards to 1. I see it displayed on the next ===
+ID: note-1790024159792 | Status: clarification_needed | Priority: high
+Summary: Client operational requirement: Implement Oh wait in regards to 1. I see it displayed on the next. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (2):
+  * oh wait in regards to 1. I see it displayed on the next page lets keep it there too I like it!
+  * add note: I have a Visibility question for developer. Who can see this section? Providers? Or only me as administrator?
+
+=== 35. [ratio_compliance] Implement Replace the long paragraph beginning with Ontario CCEYA ===
+ID: note-1790024217601 | Status: proposed | Priority: high
+Summary: Replace the long paragraph referencing Ontario CCEYA licensing standards, Jonathan, schedule, region, funding eligibility, and unlocking enrolment. Standardize to heading 'Getting Started' with body text: 'We’ll connect with you to learn about your family’s needs and help guide you through the next steps.'
+Queries (1):
+  * add note: Replace the long paragraph beginning with Ontario CCEYA licensing standards and mentioning Jonathan, schedule, region, funding eligibility, and unlocking enrolment. Use this heading and sentence: “Getting Started” “We’ll connect with you to learn about your family’s needs and help guide you through the next steps.”
+
+=== 36. [portal_ui] Streamline Timesheet Terminology: Change 'Statutory Daily Rate' to ===
+ID: note-1790024408799 | Status: in_progress | Priority: medium
+Summary: Under the Monthly Subsidy and Attendance Timesheet Submission interface (Form PROV-1), rename the column/label 'Statutory Daily Rate' to 'Daily Rate'. Removes formal legalistic jargon from provider-facing billing and timesheet tools while preserving standard per-diem accounting clarity.
+Queries (5):
+  * add note: under Monthly Subsidy and Attendance Timesheet Submission   Change “Statutory Daily Rate” to “Daily Rate.”
+  * can we undo last change?
+  * are you able to change the wording to the cceya regulatory consent & pre-screening acknowledgement?
+  * add not: payment option A : change email to the main gmail account; also the Provider guaranteed payout above should not be viewable to parents. That sensitive information is for Agency Admin and Directors only.
+  * add note: payment option A : change email to the main gmail account; also the Provider guaranteed payout above should not be viewable to parents. That sensitive information is for Agency Admin and Directors only.
+
+=== 37. [portal_ui] Implement Timesheet Role-Based Access, Payout Visibility & Audit Trail ===
+ID: note-1790024576406 | Status: in_progress | Priority: high
+Summary: Configure granular role-based permissions and audit controls on Form PROV-1 Timesheets: (1) Quarantine back-office financial columns with admin toggles allowing providers to view their Daily Rate, total care days, and estimated payout. (2) Lock Daily Rate ($35.00/day) as strictly read-only for providers. (3) Automate monthly attendance from daily check-ins while allowing provider manual overrides for legitimate corrections. (4) Implement an Admin-only audit trail logging timestamps, provider user IDs, and before/after values whenever an automated figure is manually adjusted to flag potential discrepancies.
+Queries (1):
+  * add note: I have a Visibility question for developer. Who can see this section? Providers? Or only me as administrator?
+
+=== 38. [portal_ui] Implement Timesheet Submission Copy, Confirmation Receipt & Automated ===
+ID: note-1790024995173 | Status: in_progress | Priority: high
+Summary: Standardize instructional and receipt copy across the provider timesheet workflow: (1) Update monthly submission prompt to 'Please Submit your verified monthly attendance timesheet to the agency for reporting and payroll'. (2) Update digital post-submission confirmation banner to 'Your timesheet has been submitted to the agency for payroll verification'. (3) Adopt this standardized agency phrasing across all automated month-end reminder emails and SMS alerts sent to providers.
+Queries (1):
+  * add note: rename "Submit your verified monthly attendance timesheet to Jonathan for agency municipal subsidy reporting and payroll" TO "Please Submit your verified monthly attendance timesheet to the agency for reporting and payroll"
+
+=== 39. [ai_feature] Implement 1. yes! I love the your phrase "Your timesheet has been ===
+ID: note-1790025123554 | Status: proposed | Priority: high
+Summary: Client operational requirement: Implement 1. Yes the button but also the ability to manually add just. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (5):
+  * 1. yes! I love the your phrase "Your timesheet has been submitted to the agency for payroll verification" 2. Yes
+  * 1. Yes the button but also the ability to manually add just incase the end of day is slightly hectic but a nudge / reminder to check out should be there to make sure they do it. 2. Yes sure with the option to fill out other incase it's someone authorized but not in the system for that once incidental pick up. 3. Yes the example you provided is fine.
+  * 1. Yes all parties involved with the agency as well as family members that need to sign specific compliance forms like the behaviour management ordinarily resident for example. 2. no force read through but the acknowledgment and sign off is crucial. 3. yes please
+  * 1. yes I would like a place holder for confidentiality agreement, milage reimbursement policy (this will be a added feature later on not now) the tablet hardware custody sign off is a nice addition I would like added now too. 2. sure  lets give them the dedicated HV form series 3. yes please
+  * 1. Yes ability to assign specific models to specific tools; this can be a big money saver obviously. 2. yes but with an option to toggle that off please. 3. Yes leave it to agency director and lead developer but I would like the ability to grant or revoke access  depending on the skill  and trust level of  admin staff it could benefit them if they use the ai models correctly with proper knowledge and training.
+
+=== 40. [portal_ui] Implement Monthly & Annual Invoicing with Admin-Only Distribution & ===
+ID: note-1790025281432 | Status: in_progress | Priority: high
+Summary: Configure Monthly Invoicing and Annual Statements across both Parent and Provider domains with strict Administrative gatekeeping: (1) All parent monthly fee invoices, parent annual statements, provider monthly timesheet remittance advice, and provider annual earnings statements are restricted from automatic auto-dispatch; they must be reviewed and manually distributed by Agency Admin/Director via printed hardcopy or attached PDF email at their discretion. (2) Provider annual tax statements must format as a CRA-compliant T4A earnings summary. (3) Automated January 1st parent tax receipt generation is banked for future review.
+Queries (1):
+  * add note: Confirm that Annual and Monthly Invoicing is an available feature with developer.  This should be evident for both Provider and Parents/Guardians
+
+=== 41. [ai_feature] Implement Thats fine It was just an email i sent him with the list of ===
+ID: note-1790025572456 | Status: proposed | Priority: high
+Summary: Client operational requirement: Implement Thats fine It was just an email i sent him with the list of. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (1):
+  * thats fine It was just an email i sent him with the list of Notes and changes that  have done and will continue to do in here with you going forward. Just let him know kindly :)
+
+=== 42. [intake_pipeline] Implement In the Path to Licensed care please rename "provider match ===
+ID: note-1790025828704 | Status: proposed | Priority: high
+Summary: In the 'Path to Licensed Care' milestone roadmap, update the step label 'Provider Match' to 'Meet Your Caregiver' to convey a warm, family-centred, and relational approach to home child care onboarding.
+Queries (1):
+  * add note: In the Path to Licensed care please rename "provider match" To "Meet Your Caregiver"
+
+=== 43. [portal_ui] Implement Agency Telephone (416-694-7445): Voice-Only Line & ===
+ID: note-1790026026295 | Status: in_progress | Priority: high
+Summary: Record official agency telephone number (416-694-7445) as a central configuration parameter designated strictly as a voice-only line. Display across website headers/footers, parent intake instructions, inquiry confirmation cards, and printable PDF documents. Outbound notification templates must include clear copy indicating the line is voice-only (do not reply via text). Architectural placeholder established for a future dedicated second line for two-way SMS messaging as the agency expands.
+Queries (1):
+  * add note: Agency Telephone number is 416-694-7445 just for reference
+
+=== 44. [general] Implement 2. yea this is a voice only line; I will get a second line ===
+ID: note-1790026089984 | Status: proposed | Priority: high
+Summary: Client operational requirement: Implement 2. yea this is a voice only line; I will get a second line. Evaluated for agency workflow and CCEYA compliance alignment.
+Queries (1):
+  * 2. yea this is a voice only line; I will get a second line later for sms note that please
+
+=== 45. [ai_feature] Implement OH please note that section 3 for par-0 form "schedule ===
+ID: note-1790026268357 | Status: in_progress | Priority: urgent
+Summary: Investigate and resolve rendering defect on Form PAR-0 where Section 3 ('Schedule Needs & Care Preferences') is not viewable or accessible to parents. Ensure schedule parameters (days required, care hours, and specific preferences) render correctly in both the public intake stepper and administrative form previews to support pre-screening discovery calls.
+Queries (1):
+  * add note: OH please note that section 3 for par-0 form "schedule Needs & Care preferences" Its not viewable please fix.
+
+=== 46. [portal_ui] Implement PWA Capabilities, Standalone Tablet Display & Push ===
+ID: note-1790039610309 | Status: in_progress | Priority: high
+Summary: Configure Progressive Web App (PWA) manifest and Service Worker caching tailored specifically for field tablets and smartphones. Application launches in full standalone display mode (zero browser URL bar or navigation chrome). Features IndexedDB offline persistence for CCEYA s. 26 inspections and daily rosters with background synchronization, paired with Web Push notifications for daily statutory action alerts.
+Queries (2):
+  * is this web app pwa? And does it have offline mode?
+  * Is this web app pwa? And is there an offline mode for when the internet is down things can still be recorded?
+
+=== 47. [portal_ui] Implement Child Attendance Check-Out, Authorized Pick-Up & Departure ===
+ID: note-1790226699342 | Status: in_progress | Priority: high
+Summary: Configure comprehensive daily child check-out in Licensed Provider Hub: (1) Dual time entry with one-tap real-time timestamp plus editable time picker for busy pick-up periods. (2) End-of-day automated nudge/reminder if a child remains checked in past scheduled hours. (3) Pick-up verification verifying approved contacts from Form PAR-1/PAR-2 with an 'Other (Authorized)' text field for one-time pickup designations. (4) Standardized roster status badges: 'Not Arrived', 'Checked In', 'Checked Out', 'Expected but Absent'. Automatically tallies net daily hours for Form PROV-1 timesheets.
+Queries (1):
+  * Add note: ask developer pertaining to child attendance Check in we are missing the check out function not sure if it's just missing in the demo or perhaps will be added later.
+
+=== 48. [policies_legal] Implement Compliance Portal & Digital Document Sign-Off Hub ===
+ID: note-1790299188114 | Status: in_progress | Priority: high
+Summary: Implement a centralized Compliance Portal for all agency stakeholders: Licensed Providers, Relief Caregivers, Home Visitors, Administrative Staff, and Ordinarily Resident adult household members. Supports digital document execution across mandatory compliance policies (e.g., Behaviour Management, Safe Sleep, Anaphylaxis, and Annual Offence Declarations). Features: (1) Streamlined sign-off with clear acknowledgment clauses and binding digital signatures (no forced scroll-lock required). (2) Automated notification alerts dispatched at 60, 30, and 7 days prior to annual document expiry. (3) Full administrative audit trail and Ministry-ready compliance exports.
+Queries (1):
+  * add note: Question for the developer; In regards to the compliance dossier will there be a something like a compliance  portal where they can sign off the corresponding documents that the dossier houses?
+
+=== 49. [policies_legal] Implement Home Visitor Dedicated HV Form Series (HV-0 to HV-2) & ===
+ID: note-1790299758672 | Status: in_progress | Priority: high
+Summary: Deploy a dedicated Home Visitor intake suite in the Form Builder Studio (HV-0 Application, HV-1 Credentials & Field Tablet Custody, HV-2 Policy & Annual Sign-Off). Includes: (1) Baseline statutory parity with providers (VSC, TB test, SFA/CPR, annual CCEYA policies). (2) Active College of ECEs (RECE) credential verification with automated 60/30/7-day expiry warnings. (3) Field logistics sign-off covering Ontario Driver's License, auto insurance, and Tablet Hardware Custody agreement for PIPEDA compliance. (4) Placeholders for Confidentiality Agreement and future Mileage Reimbursement Policy.
+Queries (1):
+  * add note: Just as we do reviews for providers Home Visitors also go through the whole intake process  can you make sure  they have all the same policy sign off  and document sign offs that providers do but they will also have a few more.
+
+=== 50. [portal_ui] Implement Dynamic Multi-Tier Rate Engine: CWELCC, Custom Subsidy ===
+ID: note-1790300278012 | Status: in_progress | Priority: urgent
+Summary: 1. Remove cosmetic '$0' label across municipal subsidy e-Transfers and parent profiles. 2. Implement a per-family editable Municipal Subsidy parental co-pay field formatted strictly as a daily per-diem (matching municipal placement vouchers), accompanied by a subsidy authorization expiry date and an automated 30-day renewal warning alert for caseworker follow-up. 3. Enable administrative updating of provincial CWELCC daily rates on demand. 4. Replace the $35 private fee placeholder with a dynamic, age-tiered private rate schedule (Infant, Toddler, Preschool, Kindergarten/School-Age). 5. Enforce global calculation symmetry across e-Transfer billing, parent files, monthly invoices, and Form PAR-5 contracts.
+Queries (1):
+  * did i make a note to allow an edit of the municipal subsidy and cwelcc rates for when and if the rates change?
+
+=== 51. [policies_legal] Implement Statutory Form Suite Audit: Decouple Baseline Pre-Placement ===
+ID: note-1790301020307 | Status: in_progress | Priority: high
+Summary: Conduct a comprehensive audit and cleanup across all agency forms. Decouple one-time baseline statutory pre-placement requirements (e.g., 2-step TB skin tests under CCEYA s. 57 and initial VSCs) from recurring annual compliance instruments (Form PROV-3 Annual Policy Review and Offence Declarations). Excised TB test from PROV-3 and ensure all forms reflect true operational lifecycles.
+Queries (1):
+  * add note: to aware the developer (Im sure hes working on it and will correct them but alot of the forms are incorrect. The rest of the app looks pretty good I think after all the notes made the last thing will be to correct the forms  eg. prov-3 the declaration has tb test results on it  it shouldn't  be on that type of form obviously. This is just a observation since this is one of the first times Im viewing the app but things look SOLID!! So far!
+
+=== 52. [ai_feature] Dynamic AI Model Management & One-Click LLM Upgrade Hub ===
+ID: note-1790607006825 | Status: in_progress | Priority: high
+Summary: Implement an administrative AI model management console in the Admin Command Centre: (1) Modular tool routing allowing specific models to be assigned to specific features (e.g., lightweight models for parent intake and discovery; high-reasoning models for CCEYA compliance audits and pedagogical planning) to maximize cost efficiency. (2) Automated Canadian compliance and enterprise zero-retention pre-flight verification indicator with an administrative toggle override. (3) Permission architecture defaulting access strictly to Agency Director and Lead Developer, with dynamic grant/revoke toggles to extend model management access to qualified, trained administrative staff.
+Queries (1):
+  * add note: Have developer perhaps have option to click to update new AI models  under their company category when  or as they are released so our company ai assistants are always up to date with the  latest and most current ai models.
+
+=== 53. [policies_legal] Implement 40-Page Ministry Quarterly Checklist (12 Domains) ===
+ID: note-40page-cceya-checklist | Status: in_progress | Priority: urgent
+Summary: Anchor all agency policies and inspection checklists to the Ontario CCEYA statute (14c11) and Ministry Licensing Manual. Implement the official 40-page Ministry Quarterly Checklist ('Quarterly Checklist Home Visitor EN v.08 2023-12-11') as an accordion wizard across all 12 regulatory domains.
+Queries (2):
+  * we need to make these two ontario websites the source of truth for policy and make sure not to reference these every time.
+  * client said the quarterly report is like a 40 page pdf document that needs to be filled out called 'Quarterly Checklist Home Visitor EN v.08 2023-12-11 Fillable FINAL.pdf'
+
+=== 54. [policies_legal] Review AI Child Data Governance, PII Masking & Privacy Policies ===
+ID: note-ai-children-data-governance | Status: proposed | Priority: high
+Summary: Conduct a comprehensive statutory review and establish operational policies for processing child and family data through AI services. Ensure strict compliance with Ontario PIPEDA, PHIPA, and CCEYA, covering PII tokenization/masking, parent consent disclosures, zero-retention enterprise terms, and Canadian data residency.
+Queries (1):
+  * make a note to review all policies relating to handling children's data with ai
+
+=== 55. [ai_feature] Enable Conversational Form Rollback & Version Control ===
+ID: note-form-schema-undo | Status: in_progress | Priority: medium
+Summary: Enable agency operators to undo form schema mutations or rollback fields modified during conversational AI assistance sessions.
+Queries (4):
+  * can we undo last change?
+  * did i make a note to allow an edit of the municipal subsidy and cwelcc rates for when and if the rates change?
+  * add note: Under Etransfers tab and or in their parents profile; Can you remove the $0  in municipal subsidy (cosmetic change)  some parents pay more than 0 dollars can you also allow me to edit the amount each subsidy client pays as that does change frequently with a notification attached to when that rate expires ( I will have to call the parent or remind them to contact their subsidy caseworker to  renew the rate or  update their profile etc.) Also same goes for cwelcc I need to be able to change that number due to it can be lowered at any time and I have to be able to change it on a whim. The private care fee is not 35 dollars and that needs to be changed or  editable. All these things need to be symmetrical across the application  obviously.
+  * 1. 30 days works best in my opinion that gives all parties involved ample time to get things sorted. 2. It changes for the age group so that would need to be dynamic please. 3. daily per-diem please as thats what the subsidy approvals tell us.
+
+=== 56. [intake_pipeline] Implement Form PAR-1: Multi-Select Care Type Selection ===
+ID: note-par1-multiselect-care-type | Status: completed | Priority: medium
+Summary: Update Form PAR-1 (Master Application for Enrolment) 'Type of Child Care Required' field from a single-select dropdown to a multi-select component to accommodate blended and hybrid schedules (e.g., Before/After school and PA days).
+Queries (1):
+  * Note: Under Master Application for Enrolment please have it be multi select for  (type of care required)
+
+=== 57. [intake_pipeline] Streamline Parent Intake & Registration Flow Gating ===
+ID: note-parent-registration-flow | Status: completed | Priority: medium
+Summary: Clarify the prospective family intake flow. Parents register via the 5-stage admissions pipeline: public inquiry via Form PAR-0, Director pre-screening phone interview, automated Magic Link issuance, and parent document uploads (OHIP, Yellow Card).
+Queries (3):
+  * how do register a child?
+  * what's new to do ?
+  * add note: Just as we do reviews for providers Home Visitors also go through the whole intake process  can you make sure  they have all the same policy sign off  and document sign offs that providers do but they will also have a few more.
+
+=== 58. [portal_ui] Separate Quarterly Inspection from Behaviour Guidance Audit ===
+ID: note-quarterly-inspection-diff | Status: in_progress | Priority: high
+Summary: Differentiate the physical CCEYA s. 26 premises inspection from the ACCS x CITS pedagogical behaviour guidance observation. Remove irrelevant ratio headcount fields from the behaviour audit and align with the official 10 positive guidance observation checkpoints.
+Queries (2):
+  * i noticed the quaterly inspection and behaviour audit ctas on home visitor portal go to same place?
+  * on home visitor's portal page, 'quarterly inspection' popup is the same as 'beheviour audit', what's up with this? recommendations?
+

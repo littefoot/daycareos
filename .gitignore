@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing & Artifacts
+coverage/
+*.log
+.tempmediaStorage/
+
+# Production Build
+dist/
+dist-ssr/
+*.local
+
+# Editor & OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Large Archive & Media Files
+*.zip
+*.wpress
+*.tar.gz
+*.rar
+docs/**/*.zip
+docs/**/*.wpress
+docs/**/Backups/
+docs/025. All Child Care Solutions-20260827T163507Z-1-001/
+2026-09-10-forms/
+
+# Client Internal Documents & Archive
+internal/

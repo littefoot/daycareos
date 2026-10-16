@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Child Care CRM & Parent Portal Proposal - All Child Care Solutions</title>
+  <!-- Import All Child Care Solutions Brand Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accs-orange: #f36c21;
+      --accs-orange-hover: #d95a12;
+      --accs-orange-light: #fff7ed;
+      --accs-orange-border: #fed7aa;
+      --accs-navy: #1e293b;
+      --accs-dark: #0f172a;
+      --accs-bg: #fafaf9;
+      --accs-card-bg: #ffffff;
+      --accs-border: #e7e5e4;
+      --accs-muted: #64748b;
+      --accs-accent-teal: #0d9488;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Karla', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: var(--accs-dark);
+      background-color: var(--accs-bg);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--accs-card-bg);
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(243, 108, 33, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+      padding: 48px;
+      border: 1px solid var(--accs-border);
+    }
+
+    header {
+      border-bottom: 3px solid var(--accs-orange);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-title h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--accs-navy);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-title p {
+      font-size: 14px;
+      color: var(--accs-muted);
+    }
+
+    .brand-title p a {
+      color: var(--accs-orange);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .meta-box {
+      text-align: right;
+      font-size: 13px;
+      color: var(--accs-muted);
+      background-color: var(--accs-orange-light);
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--accs-orange-border);
+    }
+
+    .meta-box strong { color: var(--accs-navy); }
+
+    .tagline-accent {
+      font-family: 'Dancing Script', cursive;
+      font-size: 22px;
+      color: var(--accs-orange);
+      margin-top: 4px;
+    }
+
+    /* Light Theme Banner */
+    .investment-banner {
+      background: #fff7ed;
+      color: var(--accs-dark);
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid var(--accs-orange-border);
+      border-left: 6px solid var(--accs-orange);
+      box-shadow: 0 4px 12px rgba(243, 108, 33, 0.06);
+    }
+
+    .investment-banner h3 { 
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px; 
+      font-weight: 800;
+      margin: 0; 
+      color: var(--accs-navy); 
+    }
+
+    .investment-banner p { margin: 4px 0 0 0; font-size: 14px; color: var(--accs-muted); }
+    
+    .price-tag { 
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 32px; 
+      font-weight: 800; 
+      color: var(--accs-orange); 
+    }
+
+    h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accs-navy);
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--accs-orange-border);
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accs-orange);
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    p { margin-bottom: 14px; font-size: 15px; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .feature-card {
+      border: 1px solid var(--accs-border);
+      border-radius: 10px;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .feature-card.highlight {
+      border: 2px solid var(--accs-orange);
+      background-color: var(--accs-orange-light);
+    }
+
+    .feature-card h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--accs-navy);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .feature-card ul { margin-left: 18px; font-size: 14px; color: var(--accs-dark); }
+    .feature-card li { margin-bottom: 6px; }
+
+    .stepper-demo {
+      background-color: #ffffff;
+      border: 1px solid var(--accs-orange-border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--accs-orange-light);
+    }
+
+    .step-item {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accs-muted);
+      flex: 1;
+    }
+
+    .step-item.active { color: var(--accs-navy); }
+    
+    .step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 6px auto;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .step-item.active .step-number { 
+      background: var(--accs-orange); 
+      color: #ffffff; 
+      box-shadow: 0 4px 10px rgba(243, 108, 33, 0.3);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--accs-border);
+    }
+
+    th, td { padding: 12px 16px; border: 1px solid var(--accs-border); text-align: left; vertical-align: top; }
+    th { 
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--accs-orange-light); 
+      color: var(--accs-navy); 
+      font-weight: 700; 
+      border-bottom: 2px solid var(--accs-orange-border);
+    }
+    tr:nth-child(even) { background-color: var(--accs-orange-light); }
+
+    .kickoff-highlight {
+      background-color: #fff7ed;
+      border-left: 5px solid var(--accs-orange);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      border: 1px solid var(--accs-orange-border);
+      border-left-width: 5px;
+    }
+
+    .kickoff-highlight h4 { 
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #c2410c; 
+      font-size: 16px; 
+      font-weight: 700;
+      margin-bottom: 6px; 
+    }
+    
+    .kickoff-highlight p { color: #9a3412; font-size: 14px; margin-bottom: 0; }
+
+    /* Technical System Architecture Diagram Styling */
+    .diagram-container {
+      background-color: #f8fafc;
+      border: 2px solid var(--accs-orange-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+
+    .diagram-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .diagram-box {
+      background: #ffffff;
+      border: 1px solid var(--accs-border);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+
+    .diagram-box.primary {
+      border: 2px solid var(--accs-orange);
+      background-color: var(--accs-orange-light);
+    }
+
+    .diagram-box.navy {
+      border: 2px solid var(--accs-navy);
+      background-color: #f1f5f9;
+    }
+
+    .diagram-box.teal {
+      border: 2px solid var(--accs-accent-teal);
+      background-color: #f0fdfa;
+    }
+
+    .diagram-box h5 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accs-navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .diagram-box p {
+      font-size: 12px;
+      color: var(--accs-muted);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .flow-arrow {
+      text-align: center;
+      font-size: 18px;
+      color: var(--accs-orange);
+      margin: 8px 0;
+      font-weight: 800;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 2px solid var(--accs-orange-border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--accs-muted);
+    }
+
+    footer a { color: var(--accs-orange); text-decoration: none; font-weight: 600; }
+
+    @media print {
+      body { padding: 0; background: #fff; }
+      .container { box-shadow: none; border: none; max-width: 100%; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-logo">
+        <img src="https://allchildcaresolutions.com/wp-content/uploads/2024/10/Asset-4ACCS-Logo-Orange-lines_001.png" alt="All Child Care Solutions Logo" />
+      </div>
+      <div class="meta-box">
+        <p><strong>Prepared By:</strong> Jared</p>
+        <p><strong>Role:</strong> Lead Solutions Architect</p>
+        <p><strong>Date:</strong> August 8, 2026</p>
+      </div>
+    </header>
+
+    <div style="margin-bottom: 24px;">
+      <div class="brand-title">
+        <h1>Child Care CRM & Admissions Platform Proposal</h1>
+        <p><strong>Client:</strong> All Child Care Solutions Inc. (<a href="https://allchildcaresolutions.com/" target="_blank">allchildcaresolutions.com</a>)</p>
+        <div class="tagline-accent">Nurturing, Safe & Innovative Child Care Technology</div>
+      </div>
+    </div>
+
+    <!-- Light Theme Investment Banner -->
+    <div class="investment-banner">
+      <div>
+        <h3>Agreed Fixed Software Package</h3>
+        <p>Custom Staff CRM + Gamified Parent Registration Portal (Google Firebase Platform)</p>
+      </div>
+      <div class="price-tag">$1,500</div>
+    </div>
+
+    <section>
+      <h2>1. Executive Summary & Vision</h2>
+      <p>All Child Care Solutions is replacing fragmented phone inquiries, paper PDFs, and legacy Jotforms with a custom, unified <strong>Admissions CRM & Parent Portal System</strong>.</p>
+      <p>For an agreed investment of <strong>$1,500</strong>, we are building a modern web application tailored to your agency's exact operating workflow. Powered by <strong>Google Firebase</strong>, this platform gives your team a central staff CRM dashboard to track parents, children, medical requirements, allergies, and documents, while providing parents with an engaging, gamified registration experience.</p>
+    </section>
+
+    <section>
+      <h2>2. Financial & Payment Milestone Terms</h2>
+      <p>The agreed fixed investment of <strong>$1,500</strong> is structured into three equal payments aligned with clear project milestones:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Milestone Payment</th>
+            <th>Amount</th>
+            <th>Trigger / Deliverable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Payment 1: Kickoff Deposit</strong></td>
+            <td><strong>$500</strong></td>
+            <td>Project initiation & Morning Kickoff Workshop.</td>
+          </tr>
+          <tr>
+            <td><strong>Payment 2: Mockup Approval</strong></td>
+            <td><strong>$500</strong></td>
+            <td>Upon interactive UI design & gamified mockup review/approval.</td>
+          </tr>
+          <tr>
+            <td><strong>Payment 3: Launch & Handoff</strong></td>
+            <td><strong>$500</strong></td>
+            <td>Upon final testing, production launch, staff training & handoff.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>3. 3-Week Implementation Roadmap</h2>
+      
+      <div class="kickoff-highlight">
+        <h4>🌅 Week 1 Morning Kickoff Workshop</h4>
+        <p>We begin Week 1 with a dedicated morning deep-dive session (in-person or virtual). We sit down together in the morning to go through every intake requirement, current form field, child health/allergy category, document verification rule, and parent portal flow in detail before writing code.</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Timeline</th>
+            <th>Phase / Milestone</th>
+            <th>Detailed Engineering Work & Deliverables</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Week 1</strong></td>
+            <td><strong>Discovery & Mockup Approval</strong></td>
+            <td>
+              <strong>Morning Kickoff Workshop:</strong> Review all requirements, Jotforms/PDFs, field mapping, document verification rules, and parent portal flows in detail.<br>
+              <strong>Firebase Infrastructure & Database Schema:</strong> Initialize Google Firebase project (Hosting, Cloud Firestore rules, Storage buckets for birth certs/health cards, Auth roles).<br>
+              <strong>Interactive Mockup Design:</strong> Build UI wireframe mockups for Staff CRM & Gamified Parent Stepper.<br>
+              <strong>➔ Milestone: Mockup Approval ($500 Payment 2)</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Week 2</strong></td>
+            <td><strong>Parent Portal & Document Engine</strong></td>
+            <td>
+              <strong>Gamified Parent Registration Portal:</strong> Engineer mobile-first step-by-step registration portal (<em>Guardian Contact ➔ Child Profile ➔ Medical/Allergies ➔ E-Sign</em>) with save-and-resume.<br>
+              <strong>Document Upload & PDF Generator:</strong> Implement Firebase Storage uploader for birth certificates & health cards + 1-click printable summary PDF generator.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Week 3</strong></td>
+            <td><strong>Staff CRM & Production Launch</strong></td>
+            <td>
+              <strong>Staff CRM Dashboard & Email Dispatcher:</strong> Build central staff database dashboard, child health drawer, document review controls, and 1-click Resend email form link dispatcher.<br>
+              <strong>Testing, Training & Production Launch:</strong> Full UAT testing with Jonathan, staff training, custom domain launch on Firebase Hosting, and GitHub repo handoff.<br>
+              <strong>➔ Milestone: Production Launch ($500 Payment 3)</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>4. Core Platform Capabilities ($1,500 Scope)</h2>
+      
+      <div class="feature-grid">
+        <div class="feature-card highlight">
+          <h4>📊 Centralized Staff CRM Dashboard</h4>
+          <ul>
+            <li><strong>Family & Child Database:</strong> Single dashboard managing parents, children, medical info, and emergency contacts via Google Cloud Firestore.</li>
+            <li><strong>Health & Allergy Tracking:</strong> Structured view of allergies, dietary needs, routines, and support requirements.</li>
+            <li><strong>Document Management Center:</strong> Store, review, approve, or request replacements for birth certificates, health cards, and immunization records in Firebase Storage.</li>
+            <li><strong>Interactive Email Dispatcher:</strong> Send interactive registration form links directly via email (Resend API) or direct URL.</li>
+          </ul>
+        </div>
+
+        <div class="feature-card highlight">
+          <h4>🎮 Gamified Parent Registration Portal</h4>
+          <ul>
+            <li><strong>Gamified Progress Map:</strong> Visual step-by-step progress tracking for parents from start to completion.</li>
+            <li><strong>Save & Resume:</strong> Parents can complete forms in one sitting or save progress and return anytime.</li>
+            <li><strong>Mobile-Responsive Uploads:</strong> Easy smartphone document capture for birth certificates and health cards.</li>
+            <li><strong>1-Click PDF Summary:</strong> Instant printable application summary page for family and agency records.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Parent Registration Gamified Progress Stepper</h3>
+      <div class="stepper-demo">
+        <div class="step-item active">
+          <div class="step-number">1</div>
+          Guardian Info
+        </div>
+        <div class="step-item active">
+          <div class="step-number">2</div>
+          Child Profile
+        </div>
+        <div class="step-item active">
+          <div class="step-number">3</div>
+          Allergies & Medical
+        </div>
+        <div class="step-item active">
+          <div class="step-number">4</div>
+          Document Uploads
+        </div>
+        <div class="step-item">
+          <div class="step-number">5</div>
+          E-Sign & Submit
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Technical Stack & Warranty</h2>
+      <ul>
+        <li><strong>Frontend:</strong> Next.js / React + TypeScript + Tailwind CSS.</li>
+        <li><strong>Database & Storage:</strong> Google Cloud Firestore + Firebase Cloud Storage.</li>
+        <li><strong>Authentication:</strong> Firebase Auth (Secure staff logins & parent portal verification).</li>
+        <li><strong>Email Dispatch:</strong> Resend API for sending branded form invitations and staff notifications.</li>
+        <li><strong>Included Warranty:</strong> <strong>1-Year Limited Warranty</strong> covering bug fixes and operational support.</li>
+      </ul>
+    </section>
+
+    <!-- Visual Technical Architecture Diagram for Non-Tech Client -->
+    <section>
+      <h2>6. How Your Platform Works (Simple Technical Overview)</h2>
+      <p>This diagram shows how your current website, parents, staff, email engine, and Google database connect seamlessly in real time:</p>
+      
+      <div class="diagram-container">
+        <!-- Row 1: Users & Entry Points -->
+        <div style="text-align: center; font-weight: 700; font-size: 13px; color: var(--accs-orange); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">1. Client & Staff Entry Points</div>
+        <div class="diagram-grid">
+          <div class="diagram-box">
+            <h5>🌐 Main Website</h5>
+            <p><strong>allchildcaresolutions.com</strong><br>Parents click "Register" or "Parent Portal" link on your current site.</p>
+          </div>
+          <div class="diagram-box primary">
+            <h5>📱 Gamified Parent Portal</h5>
+            <p><strong>Mobile & Desktop Web App</strong><br>Parents complete step-by-step registration & upload birth certs/health cards.</p>
+          </div>
+          <div class="diagram-box navy">
+            <h5>💻 Staff CRM Dashboard</h5>
+            <p><strong>Agency Administration</strong><br>Staff view family records, check medical/allergies, review docs & dispatch form links.</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">▼ &nbsp; Real-Time Data Flow & Storage &nbsp; ▼</div>
+
+        <!-- Row 2: Google Firebase Backend & Database Engine -->
+        <div style="text-align: center; font-weight: 700; font-size: 13px; color: var(--accs-navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; margin-top: 12px;">2. Secure Google Firebase Engine</div>
+        <div class="diagram-grid">
+          <div class="diagram-box teal">
+            <h5>⚡ Firebase Hosting</h5>
+            <p>Serves your ultra-fast, SSL-secured web application to parents and staff globally with 100% uptime.</p>
+          </div>
+          <div class="diagram-box teal">
+            <h5>🗄️ Cloud Firestore Database</h5>
+            <p>Stores parent contacts, child profiles, medical/allergy notes, and application statuses in real time.</p>
+          </div>
+          <div class="diagram-box teal">
+            <h5>🔒 Firebase Cloud Storage</h5>
+            <p>Securely stores uploaded birth certificates, health cards, and immunization records with encrypted access.</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">▼ &nbsp; Instant Email Dispatch & Notifications &nbsp; ▼</div>
+
+        <!-- Row 3: Automated Email Service -->
+        <div style="text-align: center; font-weight: 700; font-size: 13px; color: var(--accs-orange); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; margin-top: 12px;">3. Interactive Email Delivery Engine</div>
+        <div class="diagram-grid" style="grid-template-columns: 1fr 1fr;">
+          <div class="diagram-box primary">
+            <h5>✉️ Resend Email Service</h5>
+            <p>Sends branded form invitation links to parents and dispatches instant submission alerts to agency staff.</p>
+          </div>
+          <div class="diagram-box navy">
+            <h5>📄 Printable PDF Snapshot</h5>
+            <p>Generates 1-click printable summary PDF sheets directly from completed registrations for agency records.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Prepared for All Child Care Solutions Inc.</span>
+      <span>Website: <a href="https://allchildcaresolutions.com/" target="_blank">allchildcaresolutions.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>

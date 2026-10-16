@@ -1,0 +1,84 @@
+{
+  "name": "All Child Care Solutions (ACCS)",
+  "short_name": "ACCS Hub",
+  "description": "Ontario Licensed Home Child Care Admissions CRM, CCEYA Home Compliance Hub & Parent Registration Portal",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fdfbf7",
+  "theme_color": "#ff6900",
+  "lang": "en-CA",
+  "categories": ["education", "productivity", "government"],
+  "icons": [
+    {
+      "src": "/logos/all_child_care_solutions.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logos/all_child_care_solutions.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logos/all_child_care_solutions.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Home Visitor Field Portal",
+      "short_name": "Visitor Portal",
+      "description": "CCEYA Section 26 Quarterly Inspections & Headcount Compliance",
+      "url": "/?role=visitor",
+      "icons": [
+        {
+          "src": "/logos/all_child_care_solutions.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Provider Attendance Hub",
+      "short_name": "Provider Hub",
+      "description": "2-Tap Daily Sign-In/Out & Emergency Backpack Cards",
+      "url": "/?role=provider",
+      "icons": [
+        {
+          "src": "/logos/all_child_care_solutions.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Admin Command Centre",
+      "short_name": "Admin Hub",
+      "description": "Admissions Pipeline & Ministry Audit Binder",
+      "url": "/?role=admin",
+      "icons": [
+        {
+          "src": "/logos/all_child_care_solutions.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Family Portal",
+      "short_name": "Parent Portal",
+      "description": "Active Care Hub & CWELCC Fee Ledger",
+      "url": "/?role=parent",
+      "icons": [
+        {
+          "src": "/logos/all_child_care_solutions.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
