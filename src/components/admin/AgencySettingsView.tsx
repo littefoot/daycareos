@@ -458,7 +458,7 @@ export const AgencySettingsView: React.FC<AgencySettingsViewProps> = ({
               <span>2. Ontario Ministry Statutory Sources of Truth</span>
             </h2>
             <p className="text-xs text-slate-500 mt-0.5">
-              Authoritative legislative citations governing All Child Care Solutions. Click to inspect live Ministry pages or verify update status.
+              Authoritative legislative citations governing DaycareOS. Click to inspect live Ministry pages or verify update status.
             </p>
           </div>
 

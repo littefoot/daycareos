@@ -396,14 +396,14 @@ export const ProviderT4AModal: React.FC<ProviderT4AModalProps> = ({
                   Information for Recipient (Licensed Child Care Provider):
                 </p>
                 <p className="leading-relaxed">
-                  As an independent licensed home child care provider affiliated with All Child Care Solutions Inc., report the amount in Box 028 as gross business/self-employed income on Line 13500 (or Form T2125 Statement of Business or Professional Activities) of your personal T1 Income Tax Return. Retain this slip with your official tax records.
+                  As an independent licensed home child care provider affiliated with DaycareOS Inc., report the amount in Box 028 as gross business/self-employed income on Line 13500 (or Form T2125 Statement of Business or Professional Activities) of your personal T1 Income Tax Return. Retain this slip with your official tax records.
                 </p>
               </div>
 
               <div className="border-t border-black pt-3 flex items-center justify-between text-[10px] text-neutral-700 font-medium">
                 <div>
                   <p className="font-bold text-black">Certified by the Agency Director</p>
-                  <p>All Child Care Solutions Inc. • Executive Office</p>
+                  <p>DaycareOS Inc. • Executive Office</p>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-black">Copy 2: For Recipient's Records</p>

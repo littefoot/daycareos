@@ -117,7 +117,7 @@ export const PublicVisitorApplyPage: React.FC<PublicVisitorApplyPageProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-xs sm:text-sm font-black text-slate-900 tracking-tight">
-                  All Child Care Solutions (ACCS)
+                  DaycareOS (ACCS)
                 </span>
                 <span className="bg-blue-100 text-blue-900 text-[10px] font-black px-2 py-0.5 rounded-full border border-blue-300 uppercase">
                   Form VIS-0

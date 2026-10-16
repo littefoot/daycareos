@@ -60,6 +60,8 @@ import { PhysicalBinderModal } from './components/admin/PhysicalBinderModal';
 import { PdfSignerModal } from './components/common/PdfSignerModal';
 import { TestFamiliesSandbox } from './components/sandbox/TestFamiliesSandbox';
 import { AdminAuthGate } from './components/admin/AdminAuthGate';
+import { isSignInWithEmailLink, completeEmailLinkSignIn } from './lib/firebaseAuth';
+import { syncLeadToMaster, flushPendingLeads } from './services/leadSyncService';
 import { AccsAiAssistant, FormActionPayload } from './components/chat/AccsAiAssistant';
 import { calculateComplianceAlerts } from './lib/complianceEngine';
 import { cacheInspectionsLocally } from './utils/offlineSync';
@@ -81,10 +83,11 @@ export const App: React.FC = () => {
     // Require Google or Email sign-in on first visit to capture customer info for mailing list
     if (typeof window !== 'undefined') {
       try {
+        // Eradicate any legacy guest bypass tokens
+        localStorage.removeItem('daycare_os_guest_access');
         const userEmail = localStorage.getItem('daycare_os_user_email');
         const sessionActive = sessionStorage.getItem('daycare_os_session_active');
-        const guestAccess = localStorage.getItem('daycare_os_guest_access');
-        if (userEmail || sessionActive === 'true' || guestAccess === 'true') {
+        if (userEmail && sessionActive === 'true') {
           return true;
         }
       } catch (e) {}
@@ -112,11 +115,82 @@ export const App: React.FC = () => {
   const [activeFamilyId, setActiveFamilyId] = useState<string | undefined>(magicFamilyId || undefined);
   const [activeVisitorId, setActiveVisitorId] = useState<string | undefined>(magicVisitorId || undefined);
   const [activeProviderId, setActiveProviderId] = useState<string | undefined>(magicProviderId || undefined);
-  const [activeBrand, setActiveBrand] = useState<string>('All Child Care Solutions');
+  const [activeBrand, setActiveBrand] = useState<string>('DaycareOS');
+
+
+
+  // Auto-flush pending leads when online
+  useEffect(() => {
+    flushPendingLeads();
+    if (typeof window !== 'undefined') {
+      window.addEventListener('online', flushPendingLeads);
+      return () => window.removeEventListener('online', flushPendingLeads);
+    }
+  }, []);
+
+  // Check for Firebase Cryptographic Magic Link in URL on page load
+  useEffect(() => {
+    if (typeof window !== 'undefined' && isSignInWithEmailLink(window.location.href)) {
+      completeEmailLinkSignIn().then((res) => {
+        if (res.success && res.email) {
+          const verifiedEmail = res.email || 'verified_user@gmail.com';
+          const storedName = localStorage.getItem('daycare_os_pending_name') || verifiedEmail.split('@')[0];
+          const storedOrg = localStorage.getItem('daycare_os_pending_org') || 'Evaluator';
+          const storedSub = localStorage.getItem('daycare_os_pending_subscribed') === 'true';
+
+          const leadId = `lead_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+          const record = {
+            id: leadId,
+            email: verifiedEmail,
+            name: storedName,
+            organization: storedOrg,
+            provider: 'email',
+            verified: true,
+            subscribed: storedSub,
+            source: 'daycare_os_portfolio_demo',
+            createdAt: new Date().toISOString(),
+            userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
+          };
+
+          try {
+            const raw = localStorage.getItem('daycare_os_mailing_list_leads');
+            const list = raw ? JSON.parse(raw) : [];
+            const filtered = list.filter((l: any) => l.email !== verifiedEmail);
+            filtered.unshift(record);
+            localStorage.setItem('daycare_os_mailing_list_leads', JSON.stringify(filtered));
+
+            localStorage.setItem('daycare_os_user_email', verifiedEmail);
+            localStorage.setItem('daycare_os_user_name', storedName);
+            localStorage.setItem('daycare_os_auth_provider', 'email');
+            sessionStorage.setItem('daycare_os_session_active', 'true');
+          } catch (e) {}
+
+          // Sync to central Protoss 2027 CRM
+          syncLeadToMaster({
+            email: verifiedEmail,
+            name: storedName,
+            organization: storedOrg,
+            verified: true,
+            provider: 'email',
+            subscribed: storedSub,
+            source: 'daycare-os-demo'
+          }).catch(() => {});
+
+          setIsAdminAuthenticated(true);
+          // Clean URL parameters cleanly so browser address bar remains pristine
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      });
+    }
+  }, []);
 
   const handleLogoutAdmin = () => {
     if (typeof window !== 'undefined') {
       try {
+        sessionStorage.removeItem('daycare_os_session_active');
+        localStorage.removeItem('daycare_os_user_email');
+        localStorage.removeItem('daycare_os_user_name');
+        localStorage.removeItem('daycare_os_guest_access');
         sessionStorage.removeItem('accs_admin_authenticated');
         sessionStorage.removeItem('accs_site_authenticated');
         localStorage.removeItem('accs_admin_session_active');
@@ -1135,7 +1209,7 @@ export const App: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-canvas-sand text-ink-body">
+    <div className="min-h-screen flex flex-col bg-canvas-sand text-ink-body max-w-full overflow-x-hidden">
       {/* Top Interactive Role Switcher & Branding Header (Hidden for public applicant registration pages) */}
       {currentRole !== 'register' && currentRole !== 'apply-provider' && currentRole !== 'apply-visitor' && (
         <Header
@@ -1154,7 +1228,7 @@ export const App: React.FC = () => {
       )}
 
       {/* Dynamic Split-View Workspace: 3/4 Main Content & 1/4 Side-Docked AI Panel */}
-      <div className="flex-1 flex w-full relative min-h-0">
+      <div className="flex-1 flex w-full max-w-full relative min-h-0 overflow-x-hidden">
         {/* Main Workspace Column (contracts to 3/4 or 2/3 on lg+ viewports when AI is open) */}
         <div className={`flex-1 flex flex-col min-w-0 transition-all duration-300 ease-in-out ${
           isAiDockOpen 
@@ -1164,7 +1238,7 @@ export const App: React.FC = () => {
             : 'w-full max-w-full'
         }`}>
           {/* Main Dynamic Portal View */}
-          <main className="flex-1">
+          <main className="flex-1 min-w-0 w-full max-w-full">
         {currentRole === 'admin' && (
           <AdminCommandCentre
             activeTab={adminActiveTab}

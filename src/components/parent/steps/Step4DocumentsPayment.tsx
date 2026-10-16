@@ -381,7 +381,7 @@ export const Step4DocumentsPayment: React.FC<Step4DocumentsPaymentProps> = ({
                   e-Transfer Recipient
                 </span>
                 <p className="text-xs font-extrabold text-slate-900 truncate font-mono">
-                  allchildcaresolutions@gmail.com
+                  billing@daycare-os.ca
                 </p>
                 <span className="text-[10px] text-slate-600 block">
                   Due on <strong>1st of each month</strong>
@@ -520,7 +520,7 @@ export const Step4DocumentsPayment: React.FC<Step4DocumentsPaymentProps> = ({
                   </div>
                   <div>
                     <h4 className="font-extrabold text-slate-900 text-sm">Official Payment Method: Interac e-Transfer</h4>
-                    <p className="text-[11px] text-slate-500">Sole payment rail for All Child Care Solutions (cheques and cash are not accepted)</p>
+                    <p className="text-[11px] text-slate-500">Sole payment rail for DaycareOS (cheques and cash are not accepted)</p>
                   </div>
                 </div>
                 <span className="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-extrabold text-[10px] border border-emerald-300">
@@ -532,7 +532,7 @@ export const Step4DocumentsPayment: React.FC<Step4DocumentsPaymentProps> = ({
                 <li>Log into your Canadian online banking app (TD, RBC, Scotiabank, CIBC, BMO, etc.).</li>
                 <li>Send your payment of <strong className="text-emerald-700 font-extrabold">${calculatedMonthlyFee.toFixed(2)} CAD</strong> to:
                   <span className="inline-flex items-center gap-1.5 font-mono font-black text-slate-900 bg-orange-50 px-3 py-1 rounded-lg my-1 border-2 border-slate-900 shadow-neo-sm">
-                    allchildcaresolutions@gmail.com
+                    billing@daycare-os.ca
                   </span>
                 </li>
                 <li>In the e-Transfer memo/message field, include: <strong className="text-slate-900 font-mono bg-slate-100 px-2 py-0.5 rounded border border-slate-200">"{activeChild.fullName} - Care Fee"</strong></li>
@@ -549,7 +549,7 @@ export const Step4DocumentsPayment: React.FC<Step4DocumentsPaymentProps> = ({
                     Admin Payment Verification & Final Enrolment Confirmation
                   </h4>
                   <p className="text-[11px] text-amber-900 leading-relaxed mt-0.5">
-                    Once your e-Transfer is sent to <strong className="text-slate-900">allchildcaresolutions@gmail.com</strong>, enter your bank reference number below. Agency staff will verify the transaction confirmation and activate your child's enrolment to unlock Step 5 (Active Care Hub).
+                    Once your e-Transfer is sent to <strong className="text-slate-900">billing@daycare-os.ca</strong>, enter your bank reference number below. Agency staff will verify the transaction confirmation and activate your child's enrolment to unlock Step 5 (Active Care Hub).
                   </p>
                 </div>
               </div>
@@ -584,7 +584,7 @@ export const Step4DocumentsPayment: React.FC<Step4DocumentsPaymentProps> = ({
               {parentPaymentSubmitted && (
                 <div className="p-2.5 bg-emerald-100 border border-emerald-300 rounded-lg text-emerald-950 font-bold text-[11px] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>Notification dispatched to Agency (allchildcaresolutions@gmail.com). Enrolment will activate as soon as bank receipt is verified.</span>
+                  <span>Notification dispatched to Agency (billing@daycare-os.ca). Enrolment will activate as soon as bank receipt is verified.</span>
                 </div>
               )}
 

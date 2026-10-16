@@ -17,10 +17,8 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "firebase/app": ["src/lib/clientDb.ts"],
       "firebase/firestore": ["src/lib/clientDb.ts"],
-      "firebase/storage": ["src/lib/clientDb.ts"],
-      "firebase/auth": ["src/lib/clientDb.ts"]
+      "firebase/storage": ["src/lib/clientDb.ts"]
     }
   },
   "include": ["src"]

@@ -382,10 +382,10 @@ export const HomeVisitorPortal: React.FC<HomeVisitorPortalProps> = ({
   const isRatioViolated = headcount > 6 || underThree > 3 || underTwo > (activeInspectionProvider?.maxUnderTwo ?? 3);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 py-3.5 sm:py-6 space-y-4 sm:space-y-6 max-w-full overflow-x-hidden">
       {/* Top Mobile Field Header */}
-      <div className="bg-white p-5 rounded-3xl border-2 border-slate-900 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <div className="flex items-center gap-4">
+      <div className="bg-white p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl border-2 border-slate-900 flex flex-col md:flex-row items-start md:items-center justify-between gap-3.5 sm:gap-4 shadow-neo-sm">
+        <div className="flex items-center gap-3 sm:gap-4 min-w-0">
           <img
             src={getVisitorPhoto(activeVisitor)}
             alt={activeVisitor?.name || 'Home Visitor'}
@@ -396,49 +396,49 @@ export const HomeVisitorPortal: React.FC<HomeVisitorPortalProps> = ({
                 target.src = fallback;
               }
             }}
-            className="w-16 h-16 rounded-2xl border-2 border-slate-900 object-cover shadow-neo-sm"
+            className="w-13 h-13 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl border-2 border-slate-900 object-cover shadow-neo-sm shrink-0"
           />
-          <div>
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="bg-orange-500 text-white font-black text-xs px-2.5 py-0.5 rounded-full shadow-neo-sm">
-                Home Visitor Portal
+          <div className="min-w-0">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+              <span className="bg-orange-500 text-white font-black text-[10px] sm:text-xs px-2 sm:px-2.5 py-0.5 rounded-full shadow-neo-sm">
+                Visitor Portal
               </span>
-              <span className="bg-emerald-100 text-emerald-950 font-bold text-xs px-2 py-0.5 rounded-full border border-emerald-300">
+              <span className="bg-emerald-100 text-emerald-950 font-bold text-[10px] sm:text-xs px-2 py-0.5 rounded-full border border-emerald-300">
                 {activeVisitor?.receNumber}
               </span>
               {(magicVisitorId || urlVisitorId) && (
-                <span className="bg-blue-100 text-blue-900 font-extrabold text-[10px] px-2.5 py-0.5 rounded-full border border-blue-300 flex items-center gap-1 shadow-2xs">
-                  <CheckCircle2 className="w-3 h-3 text-blue-600" />
-                  <span>Magic Field Session</span>
+                <span className="bg-blue-100 text-blue-900 font-extrabold text-[9px] sm:text-[10px] px-2.5 py-0.5 rounded-full border border-blue-300 flex items-center gap-1 shadow-2xs">
+                  <CheckCircle2 className="w-3 h-3 text-blue-600 shrink-0" />
+                  <span>Magic Field</span>
                 </span>
               )}
             </div>
-            <h1 className="text-xl font-black text-slate-900 mt-1">{activeVisitor?.name}</h1>
-            <p className="text-xs font-semibold text-slate-500">
+            <h1 className="text-lg sm:text-xl font-black text-slate-900 mt-1 truncate">{activeVisitor?.name}</h1>
+            <p className="text-xs font-semibold text-slate-500 truncate">
               {activeVisitor?.title} • {activeVisitor?.region}
             </p>
           </div>
         </div>
 
         {/* Right Header: Connectivity / Offline Dead Zone Badge & Visitor Profile */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5 w-full md:w-auto">
           {/* PWA Tablet Connectivity & Sync Status Badge */}
           {isOnlineState && queuedCount === 0 ? (
-            <div className="flex items-center gap-1.5 px-3 py-2 bg-emerald-50 border-2 border-emerald-600 rounded-2xl text-emerald-900 text-xs font-black shadow-neo-sm">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 sm:py-2 bg-emerald-50 border-2 border-emerald-600 rounded-xl sm:rounded-2xl text-emerald-900 text-xs font-black shadow-neo-sm">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <Wifi className="w-4 h-4 text-emerald-700" />
               <span className="hidden sm:inline">Tablet PWA:</span>
               <span>Live Online</span>
             </div>
           ) : (
-            <div className="flex items-center gap-2 px-3 py-2 bg-amber-50 border-2 border-amber-600 rounded-2xl text-amber-950 text-xs font-black shadow-neo-sm">
+            <div className="flex items-center gap-2 px-3 py-1.5 sm:py-2 bg-amber-50 border-2 border-amber-600 rounded-xl sm:rounded-2xl text-amber-950 text-xs font-black shadow-neo-sm">
               <span className={`w-2.5 h-2.5 rounded-full ${!isOnlineState ? 'bg-rose-500 animate-ping' : 'bg-amber-500'}`} />
               {!isOnlineState ? (
                 <WifiOff className="w-4 h-4 text-rose-600" />
               ) : (
                 <Wifi className="w-4 h-4 text-amber-600" />
               )}
-              <span>{!isOnlineState ? 'Offline Dead Zone Mode' : 'Online'}</span>
+              <span>{!isOnlineState ? 'Offline Dead Zone' : 'Online'}</span>
               {queuedCount > 0 && (
                 <span className="bg-amber-200 border border-amber-400 px-1.5 py-0.5 rounded-full text-[10px]">
                   {queuedCount} Queued
@@ -459,12 +459,12 @@ export const HomeVisitorPortal: React.FC<HomeVisitorPortalProps> = ({
           )}
 
           {/* Switch Active Visitor Profile for Demonstration */}
-          <div className="flex items-center gap-2 bg-slate-50 p-2 rounded-2xl border-2 border-slate-900 text-xs">
-            <span className="font-black text-slate-700">Visitor Profile:</span>
+          <div className="w-full sm:w-auto flex items-center gap-2 bg-slate-50 p-2 rounded-xl sm:rounded-2xl border-2 border-slate-900 text-xs">
+            <span className="font-black text-slate-700 shrink-0">Visitor:</span>
             <select
               value={selectedVisitorId}
               onChange={(e) => setSelectedVisitorId(e.target.value)}
-              className="bg-white border-2 border-slate-900 rounded-xl p-1.5 font-bold text-slate-900 focus:outline-none cursor-pointer"
+              className="w-full min-w-0 bg-white border-2 border-slate-900 rounded-lg sm:rounded-xl p-1.5 font-bold text-slate-900 focus:outline-none cursor-pointer truncate"
             >
               {visitorsList.map(v => (
                 <option key={v.id} value={v.id}>{v.name} ({v.region})</option>
@@ -575,19 +575,19 @@ export const HomeVisitorPortal: React.FC<HomeVisitorPortalProps> = ({
                   <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-slate-100">
                     <a
                       href={`tel:${provider.phone}`}
-                      className="neo-btn bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs py-2 px-3 flex items-center justify-center gap-1.5 font-bold"
+                      className="neo-btn bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs py-2 px-2 sm:px-3 flex items-center justify-center gap-1.5 font-bold truncate"
                     >
-                      <Phone className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>Call {provider.phone}</span>
+                      <Phone className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span className="truncate">Call Provider</span>
                     </a>
                     <a
                       href={`https://maps.google.com/?q=${encodeURIComponent(provider.homeAddress + ', Ontario')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="neo-btn bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs py-2 px-3 flex items-center justify-center gap-1.5 font-bold"
+                      className="neo-btn bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs py-2 px-2 sm:px-3 flex items-center justify-center gap-1.5 font-bold truncate"
                     >
-                      <ExternalLink className="w-3.5 h-3.5 text-blue-600" />
-                      <span>Get Directions</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                      <span className="truncate">Directions</span>
                     </a>
                   </div>
 

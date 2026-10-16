@@ -3,47 +3,74 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #1e293b;
     background-color: #fdfbf7;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+
+  #root {
+    max-width: 100vw;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
   }
 }
 
+/* Hide scrollbars while allowing swipeable touch tracks */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 /* Custom Neo-Brutalist & Card Utility Styles */
-.neo-box {
-  border: 2px solid #0f172a;
-  box-shadow: 3px 3px 0px 0px #0f172a;
-  border-radius: 14px;
-  background-color: #ffffff;
-  transition: all 0.15s ease-in-out;
-}
+@layer components {
+  .neo-box {
+    border: 2px solid #0f172a;
+    box-shadow: 3px 3px 0px 0px #0f172a;
+    border-radius: 14px;
+    background-color: #ffffff;
+    transition: all 0.15s ease-in-out;
+  }
 
-.neo-box-hover:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 5px 5px 0px 0px #0f172a;
-}
+  .neo-box-hover:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0px 0px #0f172a;
+  }
 
-.neo-btn {
-  border: 2px solid #0f172a;
-  box-shadow: 3px 3px 0px 0px #0f172a;
-  border-radius: 12px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  user-select: none;
-}
+  .neo-btn {
+    border: 2px solid #0f172a;
+    box-shadow: 3px 3px 0px 0px #0f172a;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+  }
 
-.neo-btn:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0px 0px #0f172a;
-}
+  .neo-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px 0px #0f172a;
+  }
 
-.neo-btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px 0px #0f172a;
+  .neo-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px 0px #0f172a;
+  }
 }
 
 /* Sleek, Modern Neo-Brutalist & Tactile Scrollbars */

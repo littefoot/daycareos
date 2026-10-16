@@ -435,14 +435,14 @@ export const FamilyIntakePipeline: React.FC<FamilyIntakePipelineProps> = ({
       </div>
 
       {/* 5-Column Kanban Board */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-3.5 overflow-x-auto pb-4">
+      <div className="w-full max-w-full grid grid-cols-1 md:grid-cols-5 gap-3.5 overflow-x-auto no-scrollbar pb-4">
         {stages.map(stage => {
           const stageChildren = filteredChildren.filter(c => c.admissionsStage === stage.id);
           
           return (
             <div 
               key={stage.id}
-              className={`bg-slate-50 border-2 border-slate-900 rounded-2xl p-3 flex flex-col min-w-[250px] ${stage.headerColor}`}
+              className={`bg-slate-50 border-2 border-slate-900 rounded-2xl p-3 flex flex-col w-full min-w-0 md:min-w-[250px] ${stage.headerColor}`}
             >
               {/* Column Header */}
               <div className="pb-2.5 mb-3 border-b-2 border-slate-200">

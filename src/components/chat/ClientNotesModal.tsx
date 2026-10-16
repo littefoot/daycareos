@@ -181,7 +181,7 @@ export const ClientNotesModal: React.FC<ClientNotesModalProps> = ({
         priority: taskPriority,
         acceptanceCriteria: criteriaList.length > 0 ? criteriaList : [
           'Verify requirement matches client directive.',
-          'Synthesize into C:\\Projects\\allchildcaresolutions\\TODO.md in next local dev cycle.'
+          'Synthesize into C:\\Projects\\daycare-os\\TODO.md in next local dev cycle.'
         ]
       });
 

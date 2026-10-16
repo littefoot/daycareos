@@ -513,7 +513,7 @@ export const ProviderComplianceHub: React.FC<ProviderComplianceHubProps> = ({
                   className="rounded border-slate-400 text-emerald-600 focus:ring-0 w-4 h-4 mt-0.5"
                 />
                 <span className="leading-relaxed">
-                  <strong className="text-slate-900">Comprehensive Policy Compliance:</strong> I understand, agree to adhere to, and strictly enforce all child protection rules, sanitary standards, sleep routines, and ratio caps defined by the Ministry of Education and All Child Care Solutions Inc.
+                  <strong className="text-slate-900">Comprehensive Policy Compliance:</strong> I understand, agree to adhere to, and strictly enforce all child protection rules, sanitary standards, sleep routines, and ratio caps defined by the Ministry of Education and DaycareOS Inc.
                 </span>
               </label>
             </div>

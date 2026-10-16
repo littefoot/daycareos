@@ -50,7 +50,7 @@ export const INITIAL_PARENT_FORMS: FormTemplate[] = [
           { 
             id: 'f0-prescreening-consent', 
             name: 'prescreening_acknowledgment', 
-            label: 'By submitting this inquiry, I acknowledge that I am initiating an inquiry with All Child Care Solutions, a licensed Home Child Care Agency operating under the Child Care and Early Years Act, 2014 (CCEYA) and regulated by the Ontario Ministry of Education. All personal and family information is kept strictly private and confidential.', 
+            label: 'By submitting this inquiry, I acknowledge that I am initiating an inquiry with DaycareOS, a licensed Home Child Care Agency operating under the Child Care and Early Years Act, 2014 (CCEYA) and regulated by the Ontario Ministry of Education. All personal and family information is kept strictly private and confidential.', 
             type: 'consent_clause', 
             required: true, 
             gridCols: 1,
@@ -340,7 +340,7 @@ export const INITIAL_PARENT_FORMS: FormTemplate[] = [
       {
         id: 'sec-5-contract',
         title: 'Core Contractual Clauses',
-        description: 'Binding agreement between Family and All Child Care Solutions Inc.',
+        description: 'Binding agreement between Family and DaycareOS Inc.',
         fields: [
           { 
             id: 'f5-clause-1', 
@@ -377,7 +377,7 @@ export const INITIAL_PARENT_FORMS: FormTemplate[] = [
           { 
             id: 'f5-clause-5', 
             name: 'clause_5_etransfer_payment', 
-            label: '5. I agree to pay monthly child care fees in advance via Interac e-Transfer to allchildcaresolutions@gmail.com.', 
+            label: '5. I agree to pay monthly child care fees in advance via Interac e-Transfer to billing@daycare-os.ca.', 
             type: 'consent_clause', 
             required: true, 
             gridCols: 1 

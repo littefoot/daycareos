@@ -170,7 +170,7 @@ export const PublicProviderApplyPage: React.FC<PublicProviderApplyPageProps> = (
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-xs sm:text-sm font-black text-slate-900 tracking-tight">
-                  All Child Care Solutions (ACCS)
+                  DaycareOS (ACCS)
                 </span>
                 <span className="bg-purple-100 text-purple-900 text-[10px] font-black px-2 py-0.5 rounded-full border border-purple-300 uppercase">
                   Form PROV-0
@@ -223,7 +223,7 @@ export const PublicProviderApplyPage: React.FC<PublicProviderApplyPageProps> = (
                 Thank You, {applicantName.split(' ')[0]}!
               </h1>
               <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
-                Your home facility onboarding application has been securely submitted to the <strong>All Child Care Solutions (ACCS)</strong> Central Admissions team.
+                Your home facility onboarding application has been securely submitted to the <strong>DaycareOS (ACCS)</strong> Central Admissions team.
               </p>
             </div>
 
@@ -328,7 +328,7 @@ export const PublicProviderApplyPage: React.FC<PublicProviderApplyPageProps> = (
                 Operate a Licensed Home Daycare in Durham, York or Toronto
               </h1>
               <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
-                {provForm?.description || "Join All Child Care Solutions (ACCS) as an independent licensed home provider. We provide competitive agency compensation funded via CWELCC provincial allocations and parent fees, pre-screened neighborhood family matching, dedicated RECE Home Visitor safety coaching, and zero unpaid parent fees."}
+                {provForm?.description || "Join DaycareOS (ACCS) as an independent licensed home provider. We provide competitive agency compensation funded via CWELCC provincial allocations and parent fees, pre-screened neighborhood family matching, dedicated RECE Home Visitor safety coaching, and zero unpaid parent fees."}
               </p>
             </div>
 

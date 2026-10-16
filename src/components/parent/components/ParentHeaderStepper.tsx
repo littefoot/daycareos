@@ -184,7 +184,7 @@ export const ParentHeaderStepper: React.FC<ParentHeaderStepperProps> = ({
         </div>
 
         {/* The 5 Step Indicators with Gating Locks strictly for this child */}
-        <div className="grid grid-cols-5 gap-2 sm:gap-3 pt-1">
+        <div className="grid grid-cols-5 gap-1 sm:gap-3 pt-1">
           {JOURNEY_STEPS.map((step) => {
             const isUnlocked = step.num <= (childMaxStep >= 3 ? 4 : childMaxStep);
             const isDone = step.num < childMaxStep;
@@ -195,7 +195,7 @@ export const ParentHeaderStepper: React.FC<ParentHeaderStepperProps> = ({
                 key={step.num}
                 disabled={!isUnlocked}
                 onClick={() => isUnlocked && onSelectStep(step.num)}
-                className={`flex flex-col items-center text-center p-2.5 sm:p-3 rounded-2xl border-2 transition-all ${
+                className={`flex flex-col items-center text-center p-1 sm:p-3 rounded-xl sm:rounded-2xl border-2 transition-all min-w-0 ${
                   isCurrent
                     ? 'bg-orange-500 text-white border-slate-900 shadow-neo-sm scale-[1.02] cursor-pointer'
                     : isDone
@@ -206,7 +206,7 @@ export const ParentHeaderStepper: React.FC<ParentHeaderStepperProps> = ({
                 }`}
                 title={!isUnlocked ? `Locked for ${activeChild?.fullName}: Awaiting staff screening call approval` : step.label}
               >
-                <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-extrabold text-xs mb-1.5 transition-all ${
+                <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl flex items-center justify-center font-extrabold text-[10px] sm:text-xs mb-1 sm:mb-1.5 transition-all shrink-0 ${
                   isCurrent
                     ? 'bg-white text-orange-600 shadow-sm border border-orange-200'
                     : isDone
@@ -215,10 +215,10 @@ export const ParentHeaderStepper: React.FC<ParentHeaderStepperProps> = ({
                     ? 'bg-slate-200 text-slate-500 border border-slate-300'
                     : 'bg-white text-slate-700 border border-slate-300'
                 }`}>
-                  {isDone ? <Check className="w-4 h-4" /> : !isUnlocked ? <Lock className="w-3.5 h-3.5 text-slate-500" /> : step.num}
+                  {isDone ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : !isUnlocked ? <Lock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-500" /> : step.num}
                 </div>
 
-                <span className={`text-[11px] sm:text-xs font-bold leading-tight line-clamp-1 ${
+                <span className={`text-[9px] sm:text-xs font-bold leading-tight truncate w-full ${
                   isCurrent ? 'text-white font-extrabold' : isDone ? 'text-emerald-950' : !isUnlocked ? 'text-slate-400' : 'text-slate-700'
                 }`}>
                   {step.label}

@@ -247,7 +247,7 @@ export const INITIAL_PROVIDER_FORMS: FormTemplate[] = [
           { 
             id: 'fp3-4', 
             name: 'policy_handbook_signoff', 
-            label: 'I have read, understood, and agree to strictly enforce all child protection, ratio limits, and sanitary procedures outlined in the All Child Care Solutions Provider Manual.', 
+            label: 'I have read, understood, and agree to strictly enforce all child protection, ratio limits, and sanitary procedures outlined in the DaycareOS Provider Manual.', 
             type: 'consent_clause', 
             required: true, 
             gridCols: 1 

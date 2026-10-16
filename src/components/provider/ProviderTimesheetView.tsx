@@ -405,7 +405,7 @@ export const ProviderTimesheetView: React.FC<ProviderTimesheetViewProps> = ({
 
           <div className="flex items-center gap-1.5 bg-orange-100/90 px-3 py-1.5 border border-orange-300 rounded-xl text-xs font-black text-orange-950">
             <span className="w-2 h-2 rounded-full bg-orange-500 inline-block" />
-            <span>Agency: All Child Care Solutions Inc.</span>
+            <span>Agency: DaycareOS Inc.</span>
           </div>
         </div>
 
@@ -652,7 +652,7 @@ export const ProviderTimesheetView: React.FC<ProviderTimesheetViewProps> = ({
                 readOnly 
                 className="rounded text-slate-900 focus:ring-0"
               />
-              <span className="text-slate-900 font-bold">All Child Care Solutions Inc.</span>
+              <span className="text-slate-900 font-bold">DaycareOS Inc.</span>
             </label>
             <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
               ✓ Statutory Compliance Active

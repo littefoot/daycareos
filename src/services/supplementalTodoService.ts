@@ -146,7 +146,7 @@ export function generateSupplementalMarkdown(tasks: SupplementalTodoItem[], vers
 
   const footer = `\n---\n\n## 💡 Next Local Development Cycle Protocol
 1. Open Antigravity IDE and inspect \`todo_supp/active\`.
-2. Append or merge the verified items above into \`C:\\Projects\\allchildcaresolutions\\TODO.md\`.
+2. Append or merge the verified items above into \`C:\\Projects\\daycare-os\\TODO.md\`.
 3. Implement the feature and mark completed.
 `;
 

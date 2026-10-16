@@ -249,7 +249,7 @@ export const VariedEnrolmentTimesheetView: React.FC<VariedEnrolmentTimesheetView
           {/* Agency Identification Badge */}
           <div className="flex items-center gap-1.5 bg-orange-100/90 px-3 py-1.5 border border-orange-300 rounded-xl text-xs font-black text-orange-950">
             <span className="w-2 h-2 rounded-full bg-orange-500 inline-block" />
-            <span>Agency: All Child Care Solutions Inc.</span>
+            <span>Agency: DaycareOS Inc.</span>
           </div>
         </div>
 

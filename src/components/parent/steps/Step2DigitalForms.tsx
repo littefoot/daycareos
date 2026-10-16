@@ -307,7 +307,7 @@ export const Step2DigitalForms: React.FC<Step2DigitalFormsProps> = ({
               <div className="print-only-banner pb-4 mb-4 border-b-2 border-slate-900">
                 <div className="flex items-start justify-between">
                   <div>
-                    <h1 className="text-lg font-black tracking-tight text-slate-900 uppercase">All Child Care Solutions Inc.</h1>
+                    <h1 className="text-lg font-black tracking-tight text-slate-900 uppercase">DaycareOS Inc.</h1>
                     <p className="text-[10px] text-slate-600 font-bold uppercase tracking-wider">
                       Ontario Licensed Home Child Care Agency • Ministry of Education & CCEYA
                     </p>

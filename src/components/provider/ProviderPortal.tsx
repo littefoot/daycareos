@@ -601,32 +601,32 @@ export const ProviderPortal: React.FC<ProviderPortalProps> = ({
   const [activeSubView, setActiveSubView] = useState<'attendance' | 'varied_timesheet' | 'monthly_timesheet' | 'compliance'>('attendance');
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 py-3.5 sm:py-6 space-y-4 sm:space-y-6 max-w-full overflow-x-hidden">
       {/* Provider Header & Home Daycare Selector */}
-      <div className="no-print print:hidden bg-white p-5 rounded-2xl border-2 border-slate-900 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-neo-sm">
-        <div className="flex items-center gap-4">
+      <div className="no-print print:hidden bg-white p-3.5 sm:p-5 rounded-2xl border-2 border-slate-900 flex flex-col md:flex-row items-start md:items-center justify-between gap-3.5 sm:gap-4 shadow-neo-sm">
+        <div className="flex items-center gap-3 sm:gap-4 min-w-0">
           <Avatar
             name={currentProvider.name}
             photoUrl={currentProvider.photoUrl}
             size="xl"
           />
-          <div>
-            <div className="flex items-center gap-2">
-              <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${
+          <div className="min-w-0">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+              <span className={`text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full border ${
                 isApplicantMode
                   ? 'bg-purple-100 text-purple-900 border-purple-300'
                   : 'bg-amber-100 text-amber-900 border-amber-300'
               }`}>
-                {isApplicantMode ? 'Candidate Onboarding Hub' : 'Provider Hub'}
+                {isApplicantMode ? 'Candidate Onboarding' : 'Provider Hub'}
               </span>
-              <h1 className="text-xl font-extrabold text-slate-900">{currentProvider.name}</h1>
+              <h1 className="text-lg sm:text-xl font-extrabold text-slate-900 truncate">{currentProvider.name}</h1>
             </div>
-            <p className="text-xs font-semibold text-orange-600 mt-0.5">{currentProvider.homeName}</p>
-            <p className="text-[11px] text-slate-500">{currentProvider.homeAddress}, {currentProvider.neighborhood} ({currentProvider.region})</p>
+            <p className="text-xs font-semibold text-orange-600 mt-0.5 truncate">{currentProvider.homeName}</p>
+            <p className="text-[11px] text-slate-500 truncate">{currentProvider.homeAddress}, {currentProvider.neighborhood} ({currentProvider.region})</p>
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
           {/* PWA Tablet Offline Indicator */}
           {!isOnlineState && (
             <div className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 border-2 border-amber-600 rounded-xl text-amber-950 text-xs font-black shadow-neo-sm">
@@ -640,7 +640,7 @@ export const ProviderPortal: React.FC<ProviderPortalProps> = ({
           <button
             type="button"
             onClick={() => handleOpenBinderModal('all')}
-            className={`neo-btn text-xs px-3.5 py-2 font-black flex items-center gap-1.5 shadow-neo-sm cursor-pointer shrink-0 transition-all ${
+            className={`neo-btn text-xs px-3 sm:px-3.5 py-1.5 sm:py-2 font-black flex items-center gap-1.5 shadow-neo-sm cursor-pointer shrink-0 transition-all ${
               isBinderCompleted 
                 ? 'bg-emerald-700 hover:bg-emerald-600 text-white' 
                 : 'bg-slate-900 hover:bg-slate-800 text-white'
@@ -652,19 +652,19 @@ export const ProviderPortal: React.FC<ProviderPortalProps> = ({
             ) : (
               <Printer className="w-3.5 h-3.5 text-orange-400" />
             )}
-            <span>{isBinderCompleted ? 'Binder Printed & Ready' : 'Print On-Site Binder'}</span>
+            <span>{isBinderCompleted ? 'Binder Printed' : 'Print On-Site Binder'}</span>
           </button>
 
           {/* Switch Active Provider Profile for Demo */}
-          <div className="flex items-center gap-2 bg-slate-50 p-2 rounded-xl border border-slate-300 text-xs">
-            <span className="font-bold text-slate-600">Simulate Home:</span>
+          <div className="w-full sm:w-auto flex items-center gap-2 bg-slate-50 p-2 rounded-xl border border-slate-300 text-xs">
+            <span className="font-bold text-slate-600 shrink-0">Simulate:</span>
             <select
               value={selectedProviderId}
               onChange={(e) => {
                 setSelectedProviderId(e.target.value);
                 setTimesheetSubmitted(false);
               }}
-              className="bg-white border-2 border-slate-900 rounded-lg p-1 font-bold text-slate-900 focus:outline-none"
+              className="w-full min-w-0 bg-white border-2 border-slate-900 rounded-lg p-1 font-bold text-slate-900 focus:outline-none truncate"
             >
               <optgroup label="Active Licensed Providers">
                 {providersList.map(p => (
@@ -807,19 +807,22 @@ export const ProviderPortal: React.FC<ProviderPortalProps> = ({
       )}
 
       {/* Sub-Navigation Switcher (Daily Attendance vs 5-Week Timesheet vs 31-Day Timesheet vs Annual Compliance) */}
-      <div className="no-print grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 bg-slate-100 p-1.5 rounded-2xl border-2 border-slate-900 shadow-neo-sm">
+      <div className="no-print grid grid-cols-2 lg:grid-cols-4 gap-1.5 sm:gap-2 bg-slate-100 p-1.5 rounded-2xl border-2 border-slate-900 shadow-neo-sm">
         {/* Tab 1: Dashboard & Attendance */}
         <button
           onClick={() => setActiveSubView('attendance')}
-          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group ${
+          className={`flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-2 sm:py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group min-w-0 ${
             activeSubView === 'attendance'
               ? 'bg-slate-900 text-white shadow-2xs'
               : 'text-slate-700 hover:bg-slate-200'
           }`}
         >
-          <LayoutDashboard className="w-4 h-4 text-orange-400 shrink-0" />
-          <span className="text-center">Dashboard & Attendance</span>
-          <span className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-black font-mono shrink-0 shadow-2xs ${
+          <LayoutDashboard className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-400 shrink-0" />
+          <span className="text-center truncate">
+            <span className="sm:hidden">Attendance</span>
+            <span className="hidden sm:inline">Dashboard & Attendance</span>
+          </span>
+          <span className={`inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full text-[9px] sm:text-[10px] font-black font-mono shrink-0 shadow-2xs ${
             activeSubView === 'attendance'
               ? 'bg-orange-500 text-white'
               : 'bg-rose-500 text-white'
@@ -831,15 +834,18 @@ export const ProviderPortal: React.FC<ProviderPortalProps> = ({
         {/* Tab 2: 5-Week Varied Enrolment Timesheet */}
         <button
           onClick={() => setActiveSubView('varied_timesheet')}
-          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group ${
+          className={`flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-2 sm:py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group min-w-0 ${
             activeSubView === 'varied_timesheet'
               ? 'bg-amber-400 text-slate-950 shadow-2xs'
               : 'text-slate-700 hover:bg-slate-200'
           }`}
         >
-          <FileSpreadsheet className="w-4 h-4 text-slate-900 shrink-0" />
-          <span className="text-center">5-Week Varied Enrolment Timesheet</span>
-          <span className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-black font-mono shrink-0 shadow-2xs ${
+          <FileSpreadsheet className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-900 shrink-0" />
+          <span className="text-center truncate">
+            <span className="sm:hidden">5-Wk Timesheet</span>
+            <span className="hidden sm:inline">5-Week Timesheet</span>
+          </span>
+          <span className={`inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full text-[9px] sm:text-[10px] font-black font-mono shrink-0 shadow-2xs ${
             activeSubView === 'varied_timesheet'
               ? 'bg-slate-900 text-white'
               : 'bg-amber-200 text-amber-950 border border-amber-400'
@@ -851,15 +857,18 @@ export const ProviderPortal: React.FC<ProviderPortalProps> = ({
         {/* Tab 3: 31-Day Attendance Sheet (Printable) */}
         <button
           onClick={() => setActiveSubView('monthly_timesheet')}
-          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group ${
+          className={`flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-2 sm:py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group min-w-0 ${
             activeSubView === 'monthly_timesheet'
               ? 'bg-emerald-600 text-white shadow-2xs'
               : 'text-slate-700 hover:bg-slate-200'
           }`}
         >
-          <Printer className="w-4 h-4 text-white shrink-0" />
-          <span className="text-center">31-Day Attendance Sheet (Printable)</span>
-          <span className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-black font-mono shrink-0 shadow-2xs ${
+          <Printer className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" />
+          <span className="text-center truncate">
+            <span className="sm:hidden">31-Day Sheet</span>
+            <span className="hidden sm:inline">31-Day Attendance</span>
+          </span>
+          <span className={`inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full text-[9px] sm:text-[10px] font-black font-mono shrink-0 shadow-2xs ${
             activeSubView === 'monthly_timesheet'
               ? 'bg-white text-emerald-900'
               : 'bg-emerald-100 text-emerald-950 border border-emerald-400'
@@ -871,15 +880,18 @@ export const ProviderPortal: React.FC<ProviderPortalProps> = ({
         {/* Tab 4: Annual Compliance & Documents */}
         <button
           onClick={() => setActiveSubView('compliance')}
-          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group ${
+          className={`flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-2 sm:py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer group min-w-0 ${
             activeSubView === 'compliance'
               ? 'bg-purple-700 text-white shadow-2xs'
               : 'text-slate-700 hover:bg-slate-200'
           }`}
         >
-          <ShieldCheck className="w-4 h-4 text-amber-300 shrink-0" />
-          <span className="text-center">Annual Compliance & Documents</span>
-          <span className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-black font-mono shrink-0 shadow-2xs ${
+          <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300 shrink-0" />
+          <span className="text-center truncate">
+            <span className="sm:hidden">Compliance</span>
+            <span className="hidden sm:inline">Annual Compliance</span>
+          </span>
+          <span className={`inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full text-[9px] sm:text-[10px] font-black font-mono shrink-0 shadow-2xs ${
             activeSubView === 'compliance'
               ? 'bg-amber-300 text-purple-950'
               : complianceTabCount > 0

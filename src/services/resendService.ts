@@ -1,6 +1,6 @@
 import { AGENCY_PHONE, AGENCY_PAYMENT_EMAIL } from '../config/agencyConfig';
 /**
- * Resend API Email Service for All Child Care Solutions (ACCS)
+ * Resend API Email Service for DaycareOS (ACCS)
  * Handles interactive registration form dispatches, parent magic links,
  * document requests, and payment notifications.
  */
@@ -75,7 +75,7 @@ export function buildParentPortalEmailHtml(options: EmailDispatchOptions): strin
     <div style="background-color: #ff6900; padding: 20px 24px; border-bottom: 2px solid #0f172a;">
       <div style="display: flex; align-items: center; justify-content: space-between;">
         <div>
-          <h1 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 900; letter-spacing: -0.5px;">All Child Care Solutions</h1>
+          <h1 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 900; letter-spacing: -0.5px;">DaycareOS</h1>
           <p style="margin: 2px 0 0 0; color: #fff3eb; font-size: 12px; font-weight: 600;">Ontario Licensed Home Child Care Agency • CCEYA</p>
         </div>
         <div style="text-align: right;">
@@ -97,7 +97,7 @@ export function buildParentPortalEmailHtml(options: EmailDispatchOptions): strin
       <p style="margin-top: 0; font-size: 15px; font-weight: 700; color: #0f172a;">Hello ${parentName || 'Parent / Guardian'},</p>
       
       <p style="font-size: 14px; line-height: 1.6; color: #334155;">
-        ${senderName} from <strong>All Child Care Solutions</strong> has prepared your personalized, interactive digital portal for <strong>${childName || 'your child'}</strong>.
+        ${senderName} from <strong>DaycareOS</strong> has prepared your personalized, interactive digital portal for <strong>${childName || 'your child'}</strong>.
       </p>
 
       ${formTitle ? `
@@ -123,7 +123,7 @@ export function buildParentPortalEmailHtml(options: EmailDispatchOptions): strin
       <!-- Primary Action CTA Button -->
       <div style="text-align: center; margin: 28px 0;">
         <a href="${portalUrl}" target="_blank" style="display: inline-block; background-color: #0f172a; color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 900; padding: 14px 28px; border-radius: 12px; border: 2px solid #0f172a; box-shadow: 3px 3px 0px #ff6900;">
-          🚀 Open Family Registration Portal
+          Open Family Registration Portal
         </a>
       </div>
 
@@ -140,7 +140,7 @@ export function buildParentPortalEmailHtml(options: EmailDispatchOptions): strin
 
     <!-- Footer -->
     <div style="background-color: #f1f5f9; padding: 16px 24px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #64748b; text-align: center;">
-      <p style="margin: 0;"><strong>All Child Care Solutions Inc.</strong></p>
+      <p style="margin: 0;"><strong>DaycareOS Inc.</strong></p>
       <p style="margin: 2px 0 0 0;">Licensed Home Child Care Agency • Durham Region, York Region & Toronto</p>
       <p style="margin: 2px 0 0 0;">hotline: ${AGENCY_PHONE} (voice only, no SMS) • Interac rail: ${AGENCY_PAYMENT_EMAIL}</p>
     </div>
@@ -159,8 +159,8 @@ export async function sendParentPortalEmail(options: EmailDispatchOptions): Prom
 
   const htmlContent = buildParentPortalEmailHtml(options);
   const subject = formTitle
-    ? `All Child Care Solutions — Action Required: ${formTitle} for ${childName}`
-    : `All Child Care Solutions — Family Registration & Portal Access for ${childName}`;
+    ? `DaycareOS — Action Required: ${formTitle} for ${childName}`
+    : `DaycareOS — Family Registration & Portal Access for ${childName}`;
 
   if (!to || !to.includes('@')) {
     return {
@@ -180,7 +180,7 @@ export async function sendParentPortalEmail(options: EmailDispatchOptions): Prom
           'Authorization': `Bearer ${apiKey}`
         },
         body: JSON.stringify({
-          from: 'All Child Care Solutions <noreply@allchildcaresolutions.com>',
+          from: 'DaycareOS <noreply@daycare-os.ca>',
           to: [to],
           subject: subject,
           html: htmlContent

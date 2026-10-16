@@ -213,7 +213,7 @@ export const Step5ActiveCareHub: React.FC<Step5ActiveCareHubProps> = ({
               </div>
             ) : (
               <div className="p-2.5 bg-slate-50 rounded-xl text-[11px] space-y-1">
-                <p className="text-slate-600"><strong>Send e-Transfer:</strong> allchildcaresolutions@gmail.com</p>
+                <p className="text-slate-600"><strong>Send e-Transfer:</strong> billing@daycare-os.ca</p>
                 <p className="text-slate-600"><strong>Status:</strong> <span className="text-emerald-700 font-bold">✓ Account Reconciled</span></p>
               </div>
             )}

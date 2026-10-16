@@ -770,7 +770,7 @@ Reviewing **${totalAlerts > 0 ? totalAlerts : 'all'} active items** across your 
 
 2. **💳 Priority 2: Revenue Continuity & Interac Reconciliation (Morning)**
    - Review the **${paymentAlerts.length} overdue billing items** in the **e-Transfers** tab.
-   - **Action**: Click **"Dispatch 1-Click Reminder"** next to each overdue account. All electronic payments route strictly to \`allchildcaresolutions@gmail.com\`.
+   - **Action**: Click **"Dispatch 1-Click Reminder"** next to each overdue account. All electronic payments route strictly to \`billing@daycare-os.ca\`.
 
 3. **📞 Priority 3: Admissions Pipeline & Parent Screening Calls (Midday)**
    - Process the **${screeningPending.length} pending parent screening inquiries**.
@@ -797,7 +797,7 @@ Reviewing **${totalAlerts > 0 ? totalAlerts : 'all'} active items** across your 
           priority: q.includes('urgent') || q.includes('critical') ? 'urgent' : 'high',
           acceptanceCriteria: [
             'Verify operational alignment with Ontario CCEYA licensing regulations.',
-            'Synthesize into C:\\Projects\\allchildcaresolutions\\TODO.md during next local dev cycle.'
+            'Synthesize into C:\\Projects\\daycare-os\\TODO.md during next local dev cycle.'
           ]
         }, query).then(updatedDoc => {
           setSupplementalBacklog(updatedDoc);
@@ -807,7 +807,7 @@ Reviewing **${totalAlerts > 0 ? totalAlerts : 'all'} active items** across your 
 
 **Title:** ${taskText}  
 **Storage:** Single atomic document in Cloud Firestore (\`todo_supp/active\`)  
-**Target:** Prepared for direct synthesis into \`C:\\Projects\\allchildcaresolutions\\TODO.md\` during the next local development cycle.
+**Target:** Prepared for direct synthesis into \`C:\\Projects\\daycare-os\\TODO.md\` during the next local development cycle.
 
 Click **"Requirements Backlog"** in the chat header to review, edit the markdown document as a whole, or click **"📋 Copy for TODO.md"**!`;
       }
@@ -929,7 +929,7 @@ ${overdue.map(c => `• **${c.fullName}** - Monthly fee: $${c.monthlyFee.toFixed
 **To dispatch reminders:**
 1. Navigate to the **e-Transfers** tab in the Admin Command Centre.
 2. Click **"Dispatch 1-Click Reminder"** next to the child's name.
-3. The system dispatches an email reminder pointing to \`allchildcaresolutions@gmail.com\`.`;
+3. The system dispatches an email reminder pointing to \`billing@daycare-os.ca\`.`;
     }
 
     if (q.includes('reset') || q.includes('clear') || q.includes('stress test') || q.includes('24')) {
@@ -1050,7 +1050,7 @@ Here is what you can do in ACCS Home Care Hub:
       try {
         let assistantReply = '';
 
-        const systemPromptHeader = `You are the AI Assistant for All Child Care Solutions (ACCS), an Ontario licensed Home Child Care Agency operating under the Child Care and Early Years Act (CCEYA).
+        const systemPromptHeader = `You are the AI Assistant for DaycareOS (ACCS), an Ontario licensed Home Child Care Agency operating under the Child Care and Early Years Act (CCEYA).
 Answer questions concisely, professionally, and accurately using the system context below.
 Zero text emojis; use markdown formatting.
 

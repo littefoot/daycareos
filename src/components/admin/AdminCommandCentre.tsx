@@ -602,7 +602,7 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
 
       const backupPayload = {
         metadata: {
-          agencyName: 'All Child Care Solutions Inc.',
+          agencyName: 'DaycareOS Inc.',
           licensingAgency: 'Ontario Ministry of Education (CCEYA)',
           exportedBy: 'Agency Director',
           systemVersion: '2026.10-PROD',
@@ -751,126 +751,128 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
   ).length;
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-6 space-y-6">
-      {/* Top Sub-Navigation Tabs (Left) & Action CTAs (Right) — Clean Inline Bar */}
-      <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-2 pb-3 border-b border-slate-200">
-        {/* Left: Tab Switcher Pills */}
-        <div className="flex items-center gap-1 bg-white p-1 rounded-2xl border-2 border-slate-900 overflow-x-auto max-w-full scrollbar-none shadow-neo-sm shrink-0">
-          <button
-            onClick={() => setActiveTab('command')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shrink-0 whitespace-nowrap ${
-              activeTab === 'command'
-                ? 'bg-slate-900 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-          >
-            <Bell className="w-3.5 h-3.5" />
-            <span>Dashboard</span>
-            {alertsList.length > 0 && (
-              <span className="bg-red-500 text-white text-[9px] px-1.5 py-0.2 rounded-full font-black ml-0.5">
-                {alertsList.length}
-              </span>
-            )}
-          </button>
+    <div className="w-full max-w-full overflow-x-hidden px-2.5 sm:px-6 lg:px-8 py-3.5 sm:py-6 space-y-4 sm:space-y-6">
+      {/* Top Sub-Navigation Tabs (Left) & Action CTAs (Right) — Fully Mobile-Responsive */}
+      <div className="w-full max-w-full flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 pb-3 border-b border-slate-200">
+        {/* Left: Responsive Tab Switcher (Center-aligned and evenly spread on mobile) */}
+        <div className="w-full lg:w-auto">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 sm:gap-1 bg-white p-2 sm:p-1.5 rounded-2xl border-2 border-slate-900 shadow-neo-sm w-full">
+            <button
+              onClick={() => setActiveTab('command')}
+              className={`flex items-center justify-center gap-1 px-2.5 py-1.5 sm:py-1 rounded-xl sm:rounded-lg text-[11px] sm:text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
+                activeTab === 'command'
+                  ? 'bg-slate-900 text-white'
+                  : 'text-slate-600 hover:bg-slate-100'
+              }`}
+            >
+              <Bell className="w-3.5 h-3.5" />
+              <span>Dashboard</span>
+              {alertsList.length > 0 && (
+                <span className="bg-red-500 text-white text-[9px] px-1.5 py-0.2 rounded-full font-black ml-0.5">
+                  {alertsList.length}
+                </span>
+              )}
+            </button>
 
-          <button
-            onClick={() => {
-              setActiveTab('families');
-            }}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shrink-0 whitespace-nowrap ${
-              activeTab === 'families'
-                ? 'bg-slate-900 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-          >
-            <Baby className="w-3.5 h-3.5" />
-            <span>Children ({childrenList.filter(c => !c.isArchived).length})</span>
-            {activePipelineCount > 0 && activePipelineCount !== childrenList.filter(c => !c.isArchived).length && (
-              <span className="bg-orange-500 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">
-                {activePipelineCount}
-              </span>
-            )}
-          </button>
+            <button
+              onClick={() => {
+                setActiveTab('families');
+              }}
+              className={`flex items-center justify-center gap-1 px-2.5 py-1.5 sm:py-1 rounded-xl sm:rounded-lg text-[11px] sm:text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
+                activeTab === 'families'
+                  ? 'bg-slate-900 text-white'
+                  : 'text-slate-600 hover:bg-slate-100'
+              }`}
+            >
+              <Baby className="w-3.5 h-3.5" />
+              <span>Children ({childrenList.filter(c => !c.isArchived).length})</span>
+              {activePipelineCount > 0 && activePipelineCount !== childrenList.filter(c => !c.isArchived).length && (
+                <span className="bg-orange-500 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">
+                  {activePipelineCount}
+                </span>
+              )}
+            </button>
 
-          <button
-            onClick={() => setActiveTab('providers')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shrink-0 whitespace-nowrap ${
-              activeTab === 'providers'
-                ? 'bg-slate-900 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-          >
-            <Home className="w-3.5 h-3.5" />
-            <span>Providers ({providersList.length})</span>
-            {providerApplicants.length > 0 && (
-              <span className="bg-blue-600 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">
-                {providerApplicants.length}
-              </span>
-            )}
-          </button>
+            <button
+              onClick={() => setActiveTab('providers')}
+              className={`flex items-center justify-center gap-1 px-2.5 py-1.5 sm:py-1 rounded-xl sm:rounded-lg text-[11px] sm:text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
+                activeTab === 'providers'
+                  ? 'bg-slate-900 text-white'
+                  : 'text-slate-600 hover:bg-slate-100'
+              }`}
+            >
+              <Home className="w-3.5 h-3.5" />
+              <span>Providers ({providersList.length})</span>
+              {providerApplicants.length > 0 && (
+                <span className="bg-blue-600 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">
+                  {providerApplicants.length}
+                </span>
+              )}
+            </button>
 
-          <button
-            onClick={() => setActiveTab('visitors')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shrink-0 whitespace-nowrap ${
-              activeTab === 'visitors'
-                ? 'bg-slate-900 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-            title="Manage Home Visitors, CCEYA quarterly inspections & caseload assignments"
-          >
-            <UserCheck className="w-3.5 h-3.5" />
-            <span>Visitors ({visitorsList.length})</span>
-            {visitorApplicants.length > 0 && (
-              <span className="bg-purple-600 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">
-                {visitorApplicants.length}
-              </span>
-            )}
-          </button>
+            <button
+              onClick={() => setActiveTab('visitors')}
+              className={`flex items-center justify-center gap-1 px-2.5 py-1.5 sm:py-1 rounded-xl sm:rounded-lg text-[11px] sm:text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
+                activeTab === 'visitors'
+                  ? 'bg-slate-900 text-white'
+                  : 'text-slate-600 hover:bg-slate-100'
+              }`}
+              title="Manage Home Visitors, CCEYA quarterly inspections & caseload assignments"
+            >
+              <UserCheck className="w-3.5 h-3.5" />
+              <span>Visitors ({visitorsList.length})</span>
+              {visitorApplicants.length > 0 && (
+                <span className="bg-purple-600 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">
+                  {visitorApplicants.length}
+                </span>
+              )}
+            </button>
 
-          <button
-            onClick={() => setActiveTab('financials')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shrink-0 whitespace-nowrap ${
-              activeTab === 'financials'
-                ? 'bg-slate-900 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-            title="Manage monthly parent fee invoicing, provincial CWELCC grants, CRA T4A tax slips, and Interac e-transfers"
-          >
-            <DollarSign className="w-3.5 h-3.5" />
-            <span>Financials</span>
-          </button>
+            <button
+              onClick={() => setActiveTab('financials')}
+              className={`flex items-center justify-center gap-1 px-2.5 py-1.5 sm:py-1 rounded-xl sm:rounded-lg text-[11px] sm:text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
+                activeTab === 'financials'
+                  ? 'bg-slate-900 text-white'
+                  : 'text-slate-600 hover:bg-slate-100'
+              }`}
+              title="Manage monthly parent fee invoicing, provincial CWELCC grants, CRA T4A tax slips, and Interac e-transfers"
+            >
+              <DollarSign className="w-3.5 h-3.5" />
+              <span>Financials</span>
+            </button>
 
-          <button
-            onClick={() => setActiveTab('forms')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shrink-0 whitespace-nowrap ${
-              activeTab === 'forms'
-                ? 'bg-orange-500 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-          >
-            <Layers className="w-3.5 h-3.5" />
-            <span>Forms ({formsList.length + AS_NEEDED_DOCUMENT_TEMPLATES.length})</span>
-          </button>
+            <button
+              onClick={() => setActiveTab('forms')}
+              className={`flex items-center justify-center gap-1 px-2.5 py-1.5 sm:py-1 rounded-xl sm:rounded-lg text-[11px] sm:text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
+                activeTab === 'forms'
+                  ? 'bg-orange-500 text-white'
+                  : 'text-slate-600 hover:bg-slate-100'
+              }`}
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>Forms ({formsList.length + AS_NEEDED_DOCUMENT_TEMPLATES.length})</span>
+            </button>
 
-          <button
-            onClick={() => setActiveTab('settings')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shrink-0 whitespace-nowrap ${
-              activeTab === 'settings'
-                ? 'bg-orange-500 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-          >
-            <Sliders className="w-3.5 h-3.5" />
-            <span>Policy</span>
-          </button>
+            <button
+              onClick={() => setActiveTab('settings')}
+              className={`flex items-center justify-center gap-1 px-2.5 py-1.5 sm:py-1 rounded-xl sm:rounded-lg text-[11px] sm:text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
+                activeTab === 'settings'
+                  ? 'bg-orange-500 text-white'
+                  : 'text-slate-600 hover:bg-slate-100'
+              }`}
+            >
+              <Sliders className="w-3.5 h-3.5" />
+              <span>Policy</span>
+            </button>
+          </div>
         </div>
 
-        {/* Right: Action CTAs — Compact Icon Buttons */}
-        <div className="flex items-center gap-1.5 shrink-0">
+        {/* Right: Action CTAs — Center-aligned and evenly spread on mobile */}
+        <div className="w-full lg:w-auto flex items-center justify-center lg:justify-end gap-3 sm:gap-2 py-1 shrink-0">
           <button
             type="button"
             onClick={() => setIsDocumentBinOpen(true)}
-            className="w-8 h-8 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-950 border-2 border-slate-900 shadow-neo-sm hover:shadow-neo transition-all flex items-center justify-center cursor-pointer shrink-0"
+            className="w-9 h-9 sm:w-8 sm:h-8 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-950 border-2 border-slate-900 shadow-neo-sm hover:shadow-neo transition-all flex items-center justify-center cursor-pointer shrink-0"
             title="As-Needed Forms Bin (13 Templates) — Browse and distribute the agency's blank PDF templates"
             aria-label="As-Needed Forms Bin"
           >
@@ -880,7 +882,7 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
           {onOpenBinderModal && (
             <button
               onClick={onOpenBinderModal}
-              className="w-8 h-8 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border-2 border-slate-900 shadow-neo-sm hover:shadow-neo transition-all flex items-center justify-center cursor-pointer shrink-0"
+              className="w-9 h-9 sm:w-8 sm:h-8 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border-2 border-slate-900 shadow-neo-sm hover:shadow-neo transition-all flex items-center justify-center cursor-pointer shrink-0"
               title="Ministry Audit Binder — Open physical inspection compliance binder and pre-filled print hub"
               aria-label="Ministry Audit Binder"
             >
@@ -892,13 +894,12 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
             type="button"
             onClick={handleDownloadDatabaseBackup}
             disabled={isExportingBackup}
-            className="w-8 h-8 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border-2 border-slate-900 shadow-neo-sm hover:shadow-neo transition-all flex items-center justify-center cursor-pointer shrink-0 disabled:opacity-50"
+            className="w-9 h-9 sm:w-8 sm:h-8 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border-2 border-slate-900 shadow-neo-sm hover:shadow-neo transition-all flex items-center justify-center cursor-pointer shrink-0 disabled:opacity-50"
             title="Download Backup (JSON) — Export timestamped agency database backup for offline archiving and compliance"
             aria-label="Download Database Backup JSON"
           >
             <Download className="w-4 h-4 text-emerald-700" />
           </button>
-
 
           {onLoad24Profiles && (
             <button
@@ -916,7 +917,7 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
                 onLoad24Profiles();
               }}
               disabled={isSeedingData}
-              className={`w-9 h-9 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-900 border-2 border-slate-900 shadow-neo-sm flex items-center justify-center cursor-pointer transition-all shrink-0 ${
+              className={`w-9 h-9 sm:w-8 sm:h-8 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-900 border-2 border-slate-900 shadow-neo-sm flex items-center justify-center cursor-pointer transition-all shrink-0 ${
                 isSeedingData ? 'opacity-60 cursor-wait' : ''
               }`}
               title="Seed Cloud Firestore with 24 child profiles & calculate dynamic compliance dates"
@@ -934,7 +935,7 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
             <button
               type="button"
               onClick={() => setIsClearConfirmOpen(true)}
-              className="w-9 h-9 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-800 border-2 border-slate-900 shadow-neo-sm flex items-center justify-center cursor-pointer transition-all shrink-0"
+              className="w-9 h-9 sm:w-8 sm:h-8 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-800 border-2 border-slate-900 shadow-neo-sm flex items-center justify-center cursor-pointer transition-all shrink-0"
               title="Clear demo data to test entry manually from a clean slate"
               aria-label="Clear Demo Data"
             >
@@ -976,11 +977,11 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
       {activeTab === 'command' && (
         <div className="space-y-6">
           {/* Top Quick Metrics — Enhanced 4-Pillar Operations Matrix */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {/* Card 1: Ministry Policy Ground Truth (First & Green if up to date, Red if not) */}
             <div 
               onClick={() => setActiveTab('settings')}
-              className={`bg-white p-4 rounded-2xl border-2 border-slate-900 shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all cursor-pointer group flex flex-col justify-between ${
+              className={`bg-white p-3.5 sm:p-4 rounded-2xl border-2 border-slate-900 shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all cursor-pointer group flex flex-col justify-between ${
                 !isPolicyUpToDate ? 'ring-2 ring-rose-400/50' : ''
               }`}
               title="Click to inspect Ontario Ministry Regulatory Policies & Ground Truth"
@@ -1207,9 +1208,9 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
           )}
 
           {/* 2-COLUMN COMMAND HUB: CALENDAR (LEFT) & ACTION QUEUE (RIGHT) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-start">
             {/* COLUMN 1: UPCOMING EVENTS & COMPLIANCE CALENDAR (LEFT - 5 cols) */}
-            <div className="lg:col-span-5 bg-white p-5 rounded-2xl border-2 border-slate-900 space-y-4">
+            <div className="lg:col-span-5 bg-white p-3.5 sm:p-5 rounded-2xl border-2 border-slate-900 space-y-3 sm:space-y-4">
               <div className="flex items-center justify-between pb-3 border-b-2 border-slate-100">
                 <div className="flex items-center gap-2">
                   <div className="p-2 rounded-xl bg-orange-100 text-orange-900 border border-orange-300">
@@ -1459,7 +1460,7 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
             </div>
 
             {/* COLUMN 2: DETERMINISTIC DAILY ACTION QUEUE (RIGHT - 7 cols) */}
-            <div id="action-queue-section" className="lg:col-span-7 bg-white p-5 rounded-2xl border-2 border-slate-900 space-y-4 scroll-mt-6">
+            <div id="action-queue-section" className="lg:col-span-7 bg-white p-3.5 sm:p-5 rounded-2xl border-2 border-slate-900 space-y-3 sm:space-y-4 scroll-mt-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b-2 border-slate-100">
                 <div>
                   <h3 className="text-sm font-extrabold text-slate-900 flex items-center gap-2">
@@ -1477,7 +1478,7 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
               </div>
 
               {/* Action Queue Category Filters */}
-              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
+              <div className="w-full overflow-x-auto no-scrollbar scroll-smooth flex items-center gap-1.5 py-1 -mx-1 px-1 text-xs">
                 {[
                   { key: 'all', label: 'All', count: alertsList.length },
                   { key: 'document', label: 'Documents & Police', count: alertsList.filter(a => a.category === 'document').length },

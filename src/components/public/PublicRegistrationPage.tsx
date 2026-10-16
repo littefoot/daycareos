@@ -1351,7 +1351,7 @@ export const PublicRegistrationPage: React.FC<PublicRegistrationPageProps> = ({
                       Intake Inquiry & Privacy Acknowledgment *
                     </span>
                     <span>
-                      {prescreeningConsentField?.label || 'By submitting this inquiry, I acknowledge that I am initiating an intake inquiry with All Child Care Solutions, a licensed home child care agency regulated by the Ontario Ministry of Education. All personal and family information is kept strictly private and confidential.'}
+                      {prescreeningConsentField?.label || 'By submitting this inquiry, I acknowledge that I am initiating an intake inquiry with DaycareOS, a licensed home child care agency regulated by the Ontario Ministry of Education. All personal and family information is kept strictly private and confidential.'}
                     </span>
                   </div>
                 </label>

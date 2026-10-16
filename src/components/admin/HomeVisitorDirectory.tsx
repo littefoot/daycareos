@@ -499,7 +499,7 @@ export const HomeVisitorDirectory: React.FC<HomeVisitorDirectoryProps> = ({
                   <input
                     type="email"
                     required
-                    placeholder="name@allchildcaresolutions.com"
+                    placeholder="name@daycare-os.ca"
                     value={formEmail}
                     onChange={(e) => setFormEmail(e.target.value)}
                     className="w-full p-2.5 bg-slate-50 border-2 border-slate-900 rounded-xl focus:outline-none"

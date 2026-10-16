@@ -230,11 +230,11 @@ export const Header: React.FC<HeaderProps> = ({
   const ActiveIcon = activeRoleOption.icon;
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b-2 border-slate-900 shadow-sm h-16 print:hidden no-print">
+    <header className="sticky top-0 z-40 bg-white border-b-2 border-slate-900 shadow-sm h-14 sm:h-16 print:hidden no-print">
       {/* Main Header Navigation Bar */}
-      <div className="w-full h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div className="w-full h-full px-2.5 sm:px-6 lg:px-8 flex items-center justify-between gap-1.5 sm:gap-4 max-w-full">
         {/* Left Side: Brand Logo + View As Role Switcher */}
-        <div className="flex items-center gap-4 sm:gap-6 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
           <AccsLogo 
             size="md" 
             onClick={() => {
@@ -247,34 +247,40 @@ export const Header: React.FC<HeaderProps> = ({
           />
 
           {/* Custom Neo-Brutalist View As Role Selector Dropdown */}
-          <div ref={dropdownRef} className="relative">
+          <div ref={dropdownRef} className="relative min-w-0">
             <button
               type="button"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center gap-2.5 bg-slate-50 hover:bg-slate-100 border-2 border-slate-900 px-3 py-1.5 rounded-2xl shadow-neo-sm hover:shadow-neo transition-all cursor-pointer text-left select-none"
+              className="flex items-center gap-1.5 sm:gap-2.5 bg-slate-50 hover:bg-slate-100 border-2 border-slate-900 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-neo-sm hover:shadow-neo transition-all cursor-pointer text-left select-none max-w-[170px] sm:max-w-none"
               aria-expanded={isDropdownOpen}
               aria-haspopup="listbox"
             >
-              <div className="flex items-center gap-1.5">
-                <span className={`p-1 rounded-lg border border-slate-900/10 shadow-xs ${activeRoleOption.iconBg}`}>
+              <div className="flex items-center gap-1.5 min-w-0">
+                <span className={`p-1 rounded-lg border border-slate-900/10 shadow-xs shrink-0 ${activeRoleOption.iconBg}`}>
                   <ActiveIcon className={`w-3.5 h-3.5 ${activeRoleOption.iconColor}`} />
                 </span>
-                <span className="text-[11px] font-black text-slate-500 uppercase tracking-wider hidden sm:inline">
+                <span className="text-[11px] font-black text-slate-500 uppercase tracking-wider hidden md:inline">
                   View as:
                 </span>
-                <span className="text-xs font-black text-slate-900">
-                  {activeRoleOption.title}
+                <span className="text-xs font-black text-slate-900 truncate">
+                  <span className="hidden sm:inline">{activeRoleOption.title}</span>
+                  <span className="sm:hidden">
+                    {activeRoleOption.role === 'admin' ? 'Admin' : 
+                     activeRoleOption.role === 'visitor' ? 'Visitor' : 
+                     activeRoleOption.role === 'provider' ? 'Provider' : 
+                     activeRoleOption.role === 'parent' ? 'Parent' : 'Inquiry'}
+                  </span>
                 </span>
               </div>
 
               {currentRole === 'admin' && alertCount > 0 && (
-                <span className="bg-[#ff6900] text-white text-[10px] px-2 py-0.5 rounded-full font-black ml-1 hidden md:inline">
-                  {alertCount} Alerts
+                <span className="bg-[#ff6900] text-white text-[9px] px-1.5 py-0.2 rounded-full font-black ml-0.5 shrink-0">
+                  {alertCount}
                 </span>
               )}
 
               <ChevronDown 
-                className={`w-3.5 h-3.5 text-slate-700 transition-transform duration-200 ml-0.5 ${
+                className={`w-3.5 h-3.5 text-slate-700 transition-transform duration-200 ml-0.5 shrink-0 ${
                   isDropdownOpen ? 'rotate-180 text-[#ff6900]' : ''
                 }`} 
               />
@@ -282,7 +288,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {/* Neo-Brutalist Dropdown Popover */}
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-80 sm:w-96 bg-white border-2 border-slate-900 rounded-3xl shadow-neo p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+              <div className="fixed inset-x-3 top-15 sm:absolute sm:top-full sm:left-0 sm:right-auto sm:inset-x-auto sm:w-96 max-w-[calc(100vw-24px)] bg-white border-2 border-slate-900 rounded-3xl shadow-neo p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                 <div className="px-3 py-2 border-b border-slate-100 flex items-center justify-between mb-1">
                   <span className="text-[10px] font-extrabold uppercase text-slate-400 tracking-wider">
                     Switch User Portal View
@@ -406,7 +412,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 type="button"
                 onClick={() => setIsMobileShareOpen(!isMobileShareOpen)}
-                className="flex items-center gap-1.5 bg-white hover:bg-slate-50 border-2 border-slate-900 px-2.5 py-1.5 rounded-2xl shadow-neo-sm hover:shadow-neo text-xs font-black text-slate-900 cursor-pointer"
+                className="flex items-center gap-1 bg-white hover:bg-slate-50 border-2 border-slate-900 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-neo-sm hover:shadow-neo text-xs font-black text-slate-900 cursor-pointer"
                 title="Open or Copy Public Portals (Parents, Providers, Home Visitors)"
               >
                 <Share2 className="w-3.5 h-3.5 text-orange-600" />
@@ -415,7 +421,7 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
 
               {isMobileShareOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white border-2 border-slate-900 rounded-3xl shadow-neo p-2.5 z-50 animate-in fade-in">
+                <div className="fixed inset-x-3 top-15 sm:absolute sm:top-full sm:right-0 sm:left-auto sm:translate-x-0 sm:w-72 max-w-[calc(100vw-24px)] bg-white border-2 border-slate-900 rounded-3xl shadow-neo p-2.5 z-50 animate-in fade-in">
                   <div className="px-2 py-1 border-b border-slate-100 mb-2">
                     <p className="text-[10px] font-black uppercase text-slate-400 tracking-wider">
                       Open in New Tab or Copy Link
@@ -464,12 +470,12 @@ export const Header: React.FC<HeaderProps> = ({
         )}
 
         {/* Right Side: Fullscreen Button + User Profile Avatar + Logout */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
 
-          {/* Fullscreen Button */}
+          {/* Fullscreen Button (Hidden on mobile < sm to preserve touch space) */}
           <button
             onClick={toggleFullscreen}
-            className="neo-btn bg-white hover:bg-slate-50 text-slate-800 p-2 text-xs font-bold gap-1 shadow-neo-sm cursor-pointer"
+            className="hidden sm:inline-flex neo-btn bg-white hover:bg-slate-50 text-slate-800 p-2 text-xs font-bold gap-1 shadow-neo-sm cursor-pointer"
             title={isFullscreen ? 'Exit Fullscreen Mode' : 'Enter Fullscreen Mode'}
             aria-label={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
           >

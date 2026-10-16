@@ -354,7 +354,7 @@ export const INITIAL_HOME_VISITORS: HomeVisitor[] = [
     receNumber: 'RECE #88219',
     receExpiryDate: '2026-09-18', // Annual renewal in 9 days! (Triggers warning)
     phone: '(905) 555-0199',
-    email: 'sabrina.vance@allchildcaresolutions.com',
+    email: 'sabrina.vance@daycare-os.ca',
     region: 'Durham Region',
     photoUrl: '/visitors/sabrina_vance.jpg',
     assignedProviderIds: ['prov-1', 'prov-2'],
@@ -373,7 +373,7 @@ export const INITIAL_HOME_VISITORS: HomeVisitor[] = [
     receNumber: 'RECE #94103',
     receExpiryDate: '2027-03-31',
     phone: '(416) 555-0844',
-    email: 'ryan.thorne@allchildcaresolutions.com',
+    email: 'ryan.thorne@daycare-os.ca',
     region: 'York Region',
     photoUrl: '/visitors/ryan_thorne.jpg',
     assignedProviderIds: ['prov-3', 'prov-4'],
@@ -392,7 +392,7 @@ export const INITIAL_HOME_VISITORS: HomeVisitor[] = [
     receNumber: 'RECE #61984',
     receExpiryDate: '2026-08-30', // Expired 10 days ago! (Triggers urgent alert)
     phone: '(416) 555-0922',
-    email: 'nadia.chen@allchildcaresolutions.com',
+    email: 'nadia.chen@daycare-os.ca',
     region: 'Toronto',
     photoUrl: '/visitors/nadia_chen.jpg',
     assignedProviderIds: ['prov-5', 'prov-6'],

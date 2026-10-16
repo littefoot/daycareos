@@ -318,7 +318,7 @@ export const InvoiceDistributionModal: React.FC<InvoiceDistributionModalProps> =
                   ) : (
                     <>
                       <h1 className="text-lg sm:text-xl font-black tracking-tight text-black uppercase">
-                        All Child Care Solutions Inc.
+                        DaycareOS Inc.
                       </h1>
                       <p className="text-xs font-semibold text-neutral-800">
                         Ontario Licensed Home Child Care Agency • CCEYA Ministry Reg. 137/15
@@ -438,7 +438,7 @@ export const InvoiceDistributionModal: React.FC<InvoiceDistributionModalProps> =
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-black">
                   <div>
                     <p className="text-[11px] text-neutral-600">Recipient Email:</p>
-                    <p className="font-mono font-bold text-black text-sm">allchildcaresolutions@gmail.com</p>
+                    <p className="font-mono font-bold text-black text-sm">billing@daycare-os.ca</p>
                   </div>
                   <div>
                     <p className="text-[11px] text-neutral-600">Memo / Reference Note:</p>
@@ -460,7 +460,7 @@ export const InvoiceDistributionModal: React.FC<InvoiceDistributionModalProps> =
                     </>
                   ) : (
                     <>
-                      <p className="font-bold text-black">Certified by All Child Care Solutions Inc. • Executive Office</p>
+                      <p className="font-bold text-black">Certified by DaycareOS Inc. • Executive Office</p>
                       <p>Authorized Signatory: Agency Director</p>
                     </>
                   )}

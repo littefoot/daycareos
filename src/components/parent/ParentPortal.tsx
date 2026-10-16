@@ -261,7 +261,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
       if (urlAgency === 'circles' || urlAgency === 'circles-in-the-sun' || urlAgency === 'circles_in_the_sun') {
         return 'Circles in the Sun (Sister Agency)';
       }
-      return 'All Child Care Solutions Inc.';
+      return 'DaycareOS Inc.';
     }
     if (fieldName === 'care_type') {
       return 'Full-time (CWELCC $22/day)';

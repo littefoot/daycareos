@@ -242,7 +242,7 @@ export const LogoMediaLibraryModal: React.FC<LogoMediaLibraryModalProps> = ({
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {/* Option 1: All Child Care Solutions */}
+              {/* Option 1: DaycareOS */}
               <div
                 onClick={() => handleSwitchEntity('accs')}
                 className={`p-3.5 rounded-xl border-2 transition-all cursor-pointer flex items-center justify-between ${
@@ -260,7 +260,7 @@ export const LogoMediaLibraryModal: React.FC<LogoMediaLibraryModalProps> = ({
                     />
                   </div>
                   <div>
-                    <h4 className="font-extrabold text-xs text-slate-900">All Child Care Solutions</h4>
+                    <h4 className="font-extrabold text-xs text-slate-900">DaycareOS</h4>
                     <p className="text-[10px] text-slate-500">Primary Agency • {AGENCY_ENTITIES.accs.code}</p>
                   </div>
                 </div>
@@ -475,7 +475,7 @@ export const LogoMediaLibraryModal: React.FC<LogoMediaLibraryModalProps> = ({
                       onChange={(e) => setNewLogoEntity(e.target.value as any)}
                       className="w-full p-2 bg-white border-2 border-slate-900 rounded-xl font-bold text-xs focus:outline-none"
                     >
-                      <option value="accs">All Child Care Solutions (ACCS)</option>
+                      <option value="accs">DaycareOS (ACCS)</option>
                       <option value="circles_in_the_sun">Circles in the Sun</option>
                       <option value="custom">Generic / Custom Partner</option>
                     </select>

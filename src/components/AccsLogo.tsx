@@ -36,7 +36,7 @@ export const AccsLogo: React.FC<AccsLogoProps> = ({
   };
 
   const isWhite = variant === 'white';
-  const isDefaultBrand = !brandName || brandName === 'Home Care' || brandName === 'ACCS Hub' || brandName === 'All Child Care Solutions' || brandName === 'DaycareOS';
+  const isDefaultBrand = !brandName || brandName === 'Home Care' || brandName === 'ACCS Hub' || brandName === 'DaycareOS' || brandName === 'DaycareOS';
   const isDefaultSubtitle = !subtitle || subtitle === 'Portal' || subtitle === 'Home Care Hub' || subtitle === 'Licensed Child Care Platform';
 
   return (
@@ -52,9 +52,9 @@ export const AccsLogo: React.FC<AccsLogoProps> = ({
         </div>
       </div>
 
-      {/* Brand Typography */}
+      {/* Brand Typography (Hidden on mobile < sm to prioritize screen real estate for role switcher and controls) */}
       {variant !== 'icon' && (
-        <div className="flex flex-col leading-none">
+        <div className="hidden sm:flex flex-col leading-none">
           <div className={`font-black tracking-tight font-sans flex items-center gap-0.5 ${textSizes[size]} ${isWhite ? 'text-white' : 'text-slate-900'} ${onClick ? 'group-hover:text-orange-600 transition-colors' : ''}`}>
             {isDefaultBrand ? (
               <>

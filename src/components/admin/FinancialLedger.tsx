@@ -184,7 +184,7 @@ export const FinancialLedger: React.FC<FinancialLedgerProps> = ({
               <span>Interac e-Transfer Monthly Roster & Reminders</span>
             </h3>
             <p className="text-xs text-slate-500">
-              Payments are made off-platform via Interac e-transfer to <span className="font-semibold text-slate-700">allchildcaresolutions@gmail.com</span>.
+              Payments are made off-platform via Interac e-transfer to <span className="font-semibold text-slate-700">billing@daycare-os.ca</span>.
             </p>
           </div>
 
@@ -228,10 +228,10 @@ export const FinancialLedger: React.FC<FinancialLedgerProps> = ({
         </div>
 
         {/* Status Filter Bar */}
-        <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl border border-slate-300 text-xs w-fit">
+        <div className="max-w-full overflow-x-auto no-scrollbar scroll-smooth flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl border border-slate-300 text-xs">
           <button
             onClick={() => setStatusFilter('all')}
-            className={`px-3 py-1 rounded-lg font-bold transition-all ${
+            className={`px-3 py-1 rounded-lg font-bold transition-all whitespace-nowrap shrink-0 ${
               statusFilter === 'all' ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -239,7 +239,7 @@ export const FinancialLedger: React.FC<FinancialLedgerProps> = ({
           </button>
           <button
             onClick={() => setStatusFilter('pending')}
-            className={`px-3 py-1 rounded-lg font-bold transition-all ${
+            className={`px-3 py-1 rounded-lg font-bold transition-all whitespace-nowrap shrink-0 ${
               statusFilter === 'pending' ? 'bg-amber-500 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -247,7 +247,7 @@ export const FinancialLedger: React.FC<FinancialLedgerProps> = ({
           </button>
           <button
             onClick={() => setStatusFilter('paid')}
-            className={`px-3 py-1 rounded-lg font-bold transition-all ${
+            className={`px-3 py-1 rounded-lg font-bold transition-all whitespace-nowrap shrink-0 ${
               statusFilter === 'paid' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -255,7 +255,7 @@ export const FinancialLedger: React.FC<FinancialLedgerProps> = ({
           </button>
           <button
             onClick={() => setStatusFilter('overdue')}
-            className={`px-3 py-1 rounded-lg font-bold transition-all ${
+            className={`px-3 py-1 rounded-lg font-bold transition-all whitespace-nowrap shrink-0 ${
               statusFilter === 'overdue' ? 'bg-red-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -263,8 +263,8 @@ export const FinancialLedger: React.FC<FinancialLedgerProps> = ({
           </button>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs border-collapse">
+        <div className="overflow-x-auto no-scrollbar scroll-smooth -mx-5 px-5 sm:mx-0 sm:px-0">
+          <table className="w-full text-left text-xs border-collapse min-w-[650px]">
             <thead>
               <tr className="bg-slate-50 text-slate-500 font-bold uppercase text-[10px] border-b border-slate-200">
                 <th className="p-3">Child & Parent</th>
@@ -517,11 +517,11 @@ export const FinancialLedger: React.FC<FinancialLedgerProps> = ({
                 <p className="font-bold text-slate-900 mb-1">Email Preview to Parent:</p>
                 <div className="bg-white p-3 rounded-lg border border-slate-200 font-mono text-[11px] space-y-1 text-slate-700 leading-relaxed">
                   <p><strong>To:</strong> sarah.tremblay@example.com</p>
-                  <p><strong>Subject:</strong> All Child Care Solutions — Monthly Care Fee for {selectedReminderChild.fullName}</p>
+                  <p><strong>Subject:</strong> DaycareOS — Monthly Care Fee for {selectedReminderChild.fullName}</p>
                   <hr className="my-2 border-slate-100" />
                   <p>Hello Sarah,</p>
                   <p>This is a friendly reminder that the CWELCC monthly fee for <strong>{selectedReminderChild.fullName}</strong> (${selectedReminderChild.monthlyFee.toFixed(2)} CAD) is due for the upcoming month.</p>
-                  <p>Please send an Interac e-transfer to: <strong>allchildcaresolutions@gmail.com</strong></p>
+                  <p>Please send an Interac e-transfer to: <strong>billing@daycare-os.ca</strong></p>
                   <p className="text-slate-400 text-[10px] mt-2">Security answer: (No password required / auto-deposit enabled)</p>
                 </div>
               </div>

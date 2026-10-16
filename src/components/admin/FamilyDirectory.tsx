@@ -359,15 +359,15 @@ export const FamilyDirectory: React.FC<FamilyDirectoryProps> = ({
               >
                 <div className="space-y-3">
                   {/* Family Header */}
-                  <div className="flex items-start justify-between gap-3 pb-3 border-b-2 border-slate-100">
-                    <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-3 border-b-2 border-slate-100">
+                    <div className="flex items-center gap-3 min-w-0">
                       <Avatar
                         name={parent.fullName}
                         photoUrl={parent.photoUrl}
                         size="lg"
                         className="rounded-xl border-2 border-slate-900 shadow-2xs shrink-0"
                       />
-                      <div>
+                      <div className="min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
                           <h3 className="text-base font-extrabold text-slate-900 leading-tight">{parent.fullName}</h3>
                           {parent.isArchived ? (
@@ -393,13 +393,13 @@ export const FamilyDirectory: React.FC<FamilyDirectoryProps> = ({
                         </p>
                         <p className="text-xs text-slate-600 mt-0.5 flex items-center gap-1">
                           <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                          <span>{parent.homeAddress || parent.city} ({parent.region})</span>
+                          <span className="truncate">{parent.homeAddress || parent.city} ({parent.region})</span>
                         </p>
                       </div>
                     </div>
 
                     {/* Top-Right Magic Link Actions */}
-                    <div className="flex items-center gap-1.5 shrink-0">
+                    <div className="flex items-center gap-1.5 flex-wrap sm:shrink-0 self-start sm:self-auto">
                       <button
                         type="button"
                         onClick={() => handleSendParentEmail(parent)}
@@ -639,8 +639,8 @@ export const FamilyDirectory: React.FC<FamilyDirectoryProps> = ({
       {/* VIEW 2: BY INDIVIDUAL CHILD TABLE */}
       {viewMode === 'child' && (
         <div className="bg-white border-2 border-slate-900 rounded-3xl overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border-collapse">
+          <div className="overflow-x-auto no-scrollbar scroll-smooth">
+            <table className="w-full min-w-[700px] text-left text-xs border-collapse">
               <thead>
                 <tr className="bg-slate-900 text-white font-mono uppercase text-[11px] tracking-wider">
                   <th className="py-3.5 px-4">Child Name</th>

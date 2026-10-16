@@ -119,7 +119,7 @@ export const ProviderDirectory: React.FC<ProviderDirectoryProps> = ({
       neighborhood: 'Downtown Oshawa',
       region: 'Durham Region',
       phone: '(905) 555-0199',
-      email: 'provider@allchildcaresolutions.com',
+      email: 'provider@daycare-os.ca',
       photoUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150',
       maxCapacity: 6,
       maxUnderThree: 3,
@@ -255,15 +255,15 @@ export const ProviderDirectory: React.FC<ProviderDirectoryProps> = ({
             >
               <div className="space-y-3">
                 {/* Provider Header */}
-                <div className="flex items-start justify-between gap-3 pb-3 border-b-2 border-slate-100">
-                  <div className="flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-3 border-b-2 border-slate-100">
+                  <div className="flex items-center gap-3 min-w-0">
                     <Avatar
                       name={provider.name}
                       photoUrl={provider.photoUrl}
                       size="lg"
                       className="rounded-xl border-2 border-slate-900 shadow-2xs shrink-0"
                     />
-                    <div>
+                    <div className="min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="text-base font-extrabold text-slate-900 leading-tight">{provider.name}</h3>
                         <span className="flex items-center text-[10px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">
@@ -287,7 +287,7 @@ export const ProviderDirectory: React.FC<ProviderDirectoryProps> = ({
                       <p className="text-xs font-bold text-orange-600 mt-0.5">{provider.homeName}</p>
                       <p className="text-xs text-slate-600 mt-0.5 flex items-center gap-1">
                         <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                        <span>{provider.homeAddress}, {provider.neighborhood} ({provider.region})</span>
+                        <span className="truncate">{provider.homeAddress}, {provider.neighborhood} ({provider.region})</span>
                       </p>
 
                       {/* Badges: School-Age & Own Children in Ratio */}
@@ -307,7 +307,7 @@ export const ProviderDirectory: React.FC<ProviderDirectoryProps> = ({
                   </div>
 
                   {/* Top-Right Magic Link Actions */}
-                  <div className="flex items-center bg-orange-50/90 border-2 border-slate-900 rounded-xl p-0.5 shadow-2xs shrink-0">
+                  <div className="flex items-center bg-orange-50/90 border-2 border-slate-900 rounded-xl p-0.5 shadow-2xs shrink-0 self-start sm:self-auto">
                     <button
                       type="button"
                       onClick={() => {

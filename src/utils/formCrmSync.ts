@@ -1,5 +1,5 @@
 /**
- * Automated CRM Sync Utility for All Child Care Solutions (ACCS)
+ * Automated CRM Sync Utility for DaycareOS (ACCS)
  * Automatically parses, formats, and syncs parent form submission payloads
  * (PAR-1 through PAR-5) directly into Child & Parent CRM profiles in real time,
  * eliminating manual staff data entry entirely.
