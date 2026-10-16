@@ -78,15 +78,16 @@ export const App: React.FC = () => {
   const isApplyVisitorView = pathname.includes('/apply-visitor') || urlParams.get('role') === 'apply-visitor' || urlParams.get('view') === 'apply-visitor';
   
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState<boolean>(() => {
+    // Require Google or Email sign-in on first visit to capture customer info for mailing list
     if (typeof window !== 'undefined') {
       try {
-        return sessionStorage.getItem('accs_admin_authenticated') === 'true' ||
-               sessionStorage.getItem('accs_site_authenticated') === 'true' ||
-               localStorage.getItem('accs_admin_session_active') === 'true' ||
-               localStorage.getItem('accs_site_authenticated') === 'true';
-      } catch (e) {
-        return false;
-      }
+        const userEmail = localStorage.getItem('daycare_os_user_email');
+        const sessionActive = sessionStorage.getItem('daycare_os_session_active');
+        const guestAccess = localStorage.getItem('daycare_os_guest_access');
+        if (userEmail || sessionActive === 'true' || guestAccess === 'true') {
+          return true;
+        }
+      } catch (e) {}
     }
     return false;
   });
@@ -1123,9 +1124,9 @@ export const App: React.FC = () => {
         </main>
         <footer className="bg-white border-t-2 border-slate-900 py-6 text-center text-xs text-slate-500 font-medium">
           <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-            <p>© 2026 All Child Care Solutions Inc. • Licensed under Ontario Ministry of Education & CCEYA</p>
+            <p>© 2026 DaycareOS Child Care Network • Licensed under Ontario Ministry of Education & CCEYA</p>
             <p className="text-[11px] text-slate-400">
-              Private Client Staging Preview • Montreal Region
+              DaycareOS Interactive Portfolio Showcase • Client-Side Sandbox
             </p>
           </div>
         </footer>
@@ -1344,7 +1345,7 @@ export const App: React.FC = () => {
       {/* Footer — 100% Full Width across the entire viewport */}
       <footer className="w-full bg-white border-t-2 border-slate-900 py-6 text-center text-xs text-slate-500 font-medium z-10 shrink-0">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>© 2026 All Child Care Solutions Inc. • Licensed under Ontario Ministry of Education & CCEYA</p>
+          <p>© 2026 DaycareOS Child Care Network • Licensed under Ontario Ministry of Education & CCEYA</p>
           <p className="text-[11px] text-slate-400">
             Powered by Google Firebase Real-Time Engine • All Rights Reserved
           </p>

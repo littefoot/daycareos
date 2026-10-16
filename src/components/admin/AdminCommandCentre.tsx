@@ -539,6 +539,42 @@ export const AdminCommandCentre: React.FC<AdminCommandCentreProps> = ({
   const [backupNotice, setBackupNotice] = useState<string | null>(null);
   const [isExportingBackup, setIsExportingBackup] = useState(false);
 
+  // Download captured mailing list leads CSV
+  const handleDownloadMailingList = () => {
+    try {
+      const raw = localStorage.getItem('daycare_os_mailing_list_leads');
+      const leads = raw ? JSON.parse(raw) : [];
+      if (leads.length === 0) {
+        alert('No customer leads captured yet. Sign out and log in with Google or Email to test lead capture!');
+        return;
+      }
+      
+      const headers = ['ID', 'Name', 'Email', 'Organization', 'Provider', 'Subscribed', 'Captured At'];
+      const rows = leads.map((l: any) => [
+        l.id || '',
+        '"' + (l.name || '').replace(/"/g, '""') + '"',
+        '"' + (l.email || '').replace(/"/g, '""') + '"',
+        '"' + (l.organization || '').replace(/"/g, '""') + '"',
+        l.provider || '',
+        l.subscribed ? 'Yes' : 'No',
+        l.createdAt || ''
+      ]);
+      
+      const csvContent = [headers.join(','), ...rows.map((r: string[]) => r.join(','))].join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `daycare-os-mailing-list-${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      console.error('Failed to export leads:', e);
+    }
+  };
+
   const handleDownloadDatabaseBackup = () => {
     setIsExportingBackup(true);
     try {
