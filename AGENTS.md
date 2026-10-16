@@ -1,16 +1,13 @@
-# All Child Care Solutions (ACCS) — Agent Context & Rules
+# DaycareOS — Agent Context, Architecture & Rules
 
 ## 🚀 System Overview
-**All Child Care Solutions (ACCS)** is a centralized admissions CRM, home compliance hub, and parent registration portal for an Ontario licensed home child care agency operating under the **Ministry of Education & Child Care and Early Years Act (CCEYA)** across Durham Region (Oshawa, Whitby), York Region (Markham), and Toronto.
+**DaycareOS** is a sovereign, standalone licensed child care operating system, admissions CRM, home compliance hub, and parent registration portal engineered for licensed home child care agencies and early childhood networks.
 
-- **Client / Primary Operator**: Jonathan (Jon), Agency Director
-- **Official Agency Phone Number / 24/7 Hotline**: **`+1 (416) 694-7445`**
-- **Sole Payment / Interac e-Transfer Rail**: `allchildcaresolutions@gmail.com`
-- **Sister Agency Support**: "Circles in the Sun" (Entity Switcher Supported)
-- **Live Staging URL**: [https://accs-hub.web.app](https://accs-hub.web.app) (and `https://accs-hub.firebaseapp.com`)
-- **GitHub Repository**: [https://github.com/littefoot/accs-hub](https://github.com/littefoot/accs-hub)
-- **Firebase Project ID**: `accs-hub` (Project Number: `402449727247`)
-- **Cloud Database Region**: `northamerica-northeast1` (Montreal, Canada — Enforces strict Canadian PIPEDA / PHIPA data residency for children's OHIP health cards and medical records)
+- **Product Identity**: DaycareOS (Standalone Child Care OS & Portfolio Showcase)
+- **Live Showcase URL**: [https://daycare-os-2026.web.app](https://daycare-os-2026.web.app)
+- **GitHub Repository**: [https://github.com/littefoot/daycareos](https://github.com/littefoot/daycareos)
+- **Firebase Project ID**: `daycare-os-2026`
+- **Data Engine**: Reactive In-Browser Database (`src/lib/clientDb.ts`) + Local Storage + Lead Sync to `protoss.ca`
 
 ---
 
